@@ -12,8 +12,7 @@ const Mileage = (sequelize, type) => {
         reviewedMileage: type.STRING,
         consumptionMileage: type.STRING,
         performanceMileage: type.STRING,
-        performanceMileage: type.STRING,
-        performanceMileage: type.STRING,
+        VBMileage: type.STRING,
         creatMileage: {
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP'),
