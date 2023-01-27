@@ -1,99 +1,36 @@
 <link rel="stylesheet" href="/css/usuarios/registro.css" type="text/css">
 
-<form action="/register" method="post" enctype="multipart/form-data" id="ocultar">
+<form action="/register" method="post" id="ocultar">
     <div id="contenedor">
-        <!-- Aquí comienza la seccion de imagen y texto -->
-        <div id="imagen">
-            <label>Foto del Usuario</label>
-            <div id="cambioImagen">
-                <img src="/img/user/NoImagen.jpg" id="imagenPrevisualizacion">
-            </div>
-            <input type="file" name="imagenUsuario" id="seleccionArchivos" accept="image/*" required>
-        </div>
-
-        <div id="texto">
-            <h2>BIENVENIDO/A</h2>
-            <p>¡Registrate y publica tus eventos al mundo!</p>
-            <div id="botonIniciarSesion">
-                <a href="/login">
-                    <button type="button">
-                        <div id="iconoLogin">
-                            <img src="/img/icons/white/login.png">
-                        </div>Iniciar Sesión
-                    </button>
-                </a>
-            </div>
-        </div>
-        <!-- Aquí termina la sección de imagen y texto -->
-
         <!-- Aquí comienza el formulario -->
         <div id="formulario">
             <div id="titulo">
                 <p>Registro</p>
-                {{#each usuario}}
-                <input type="text" name="idUsuarios" id="numero" value="{{maximo}}" readonly>
-                {{/each}}
             </div>
 
-            <div id="nombreCLiente">
-                <label>Nombres:</label>
-                <input type="text" name="nameClient" id="nameClient" required>
-            </div>
-
-            <div id="apellidoCliente">
-                <label>Apellidos:</label>
-                <input type="text" name="lastNameClient" id="lastNameClient" required>
-            </div>
-
-            <div id="TipoEleccion">
-                <label>Tipo de Identidicación:</label>
-                <select name="typeIdentificationClient" id="tipoEleccion">
-                    <option>Seleccione un Tipo de Persona</option>
-
-                    <option value="Cedula">Cedula</option>
-                    <option value="Pasaporte">Pasaporte</option>
-                    <option value="Ruc">Ruc</option>
-                </select>
+            <div id="nombreUsuario">
+                <label>Nombrecompleto:</label>
+                <input type="text" name="namesUser" id="" required>
             </div>
 
             <div id="identificacion">
                 <label>Identificación:</label>
-                <input type="text" name="identifiacationCardClient" id="pasaporte" required>
+                <input type="text" name="identificationCardUser" id="" required>
             </div>
 
-            <div id="correoCliente">
+            <div id="correoUsuario">
                 <label>Correo Electrónico:</label>
-                <input type="text" name="emailClient" id="emailClient" required>
+                <input type="text" name="emailUser" id="" required>
             </div>
 
-            <div id="celularCliente">
+            <div id="celularUsuario">
                 <label>Celular:</label>
-                <input type="text" name="phoneClient" id="phoneClient" required>
-            </div>
-
-            <div id="tipoPersona">
-                <label>Tipo de Persona:</label>
-                <select name="nameTypePerson">
-                    <option>Seleccione un Tipo de Persona</option>
-                    {{#each listTypePerson}}
-                    <option value="{{idTypePerson}}">{{nameTypePerson}}</option>
-                    {{/each}}
-                </select>
-            </div>
-
-            <div id="genero">
-                <label>Género:</label>
-                <select name="nameGener">
-                    <option>Seleccione un Género</option>
-                    {{#each listGener}}
-                    <option value="{{idGener}}">{{nameGener}}</option>
-                    {{/each}}
-                </select>
+                <input type="text" name="phoneUser" id="" required>
             </div>
 
             <div id="Nick">
                 <label>Usuario:</label>
-                <input type="text" name="username" id="usernameClient" required>
+                <input type="text" name="username" id="" required>
             </div>
 
             <div id="Contraseña">
@@ -121,6 +58,4 @@
     </div>
 </form>
 
-<script src="/js/numero.js"></script>
-<script src="/js/previsualizacion.js"></script>
 <script src="/js/usuarios/login.js"></script>

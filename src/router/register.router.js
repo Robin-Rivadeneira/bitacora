@@ -1,17 +1,15 @@
 const express = require('express');
 const router = express.Router();
 
-const { show, register, showLogin, login, logout, showUpdatePassword, updatePassword, showProfile } = require('../controllers/register.controller')
+const { showRegister, register, showLogin, login, logout, showProfile } = require('../controllers/register.controller')
 
 const {isLoggedIn} = require('../lib/auth')
 
-router.get('/register', show)
+router.get('/register', showRegister)
 router.post('/register', register)
-router.get('/login', showLogin)
-router.post('/login', login)
+router.get('/Login/:id', showLogin)
+router.post('/Login', login)
 router.get('/logout', logout)
-router.get('/updatePassword', showUpdatePassword)
-router.post('/updatePassword', updatePassword)
 router.get('/profile/:id', isLoggedIn, showProfile)
 
 

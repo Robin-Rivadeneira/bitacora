@@ -1,5 +1,7 @@
 const {Sequelize} = require("sequelize");
 
+const userModel = require("../models/user");
+
 const{ MYSQLHOST, MYSQLUSER, MYSQLPASSWORD, MYSQLDATABASE, MYSQLPORT, MYSQL_URI, } = require ("../keys");
 
 const sequelize = new Sequelize( MYSQLDATABASE , MYSQLUSER, MYSQLPASSWORD, {
@@ -22,8 +24,6 @@ sequelize.sync({ force: false })
 	.then(() => {
 		console.log("tablas sincronizadas");
 	});
-
-const userModel = require("../models/user");
 
 //sincronia
 const user = userModel(sequelize, Sequelize);

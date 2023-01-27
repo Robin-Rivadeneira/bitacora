@@ -1,0 +1,62 @@
+#movs {
+    width: 100%;
+    height: 100%;
+    max-width: 50%;
+    max-height: 80%;
+    position: absolute;
+    top: 10%;
+    left: 25%;
+}
+
+/* IMAGEN */
+#inicio {
+    width: 100%;
+    height: 100%;
+    max-width: 60%;
+    max-height: 50%;
+    position: absolute;
+    top: 1%;
+    left: 20%;
+}
+
+#inicio img {
+    width: 100%;
+    height: 100%;
+}
+
+/* FRASE */
+#frase {
+    width: 100%;
+    position: absolute;
+    top: 45%;
+    left: 0%;
+    text-align: center;
+}
+
+#frase b {
+    color: #E89323;
+}
+
+/* INPUT */
+#validacion {
+    width: 100%;
+    height: 7.5%;
+    max-width: 80%;
+    position: absolute;
+    left: 10%;
+    top: 65%;
+}
+
+/* BOTON */
+#boton {
+    width: 100%;
+    max-width: 50%;
+    position: absolute;
+    top: 75%;
+    left: 25%;
+}
+
+#boton button {
+    font-size:25px;
+    width: 100%;
+}

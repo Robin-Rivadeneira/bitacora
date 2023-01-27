@@ -29,8 +29,8 @@ registerCtl.showLogin = async (req, res) => {
 };
 
 registerCtl.login = passport.authenticate("local.signin", {
-	successRedirect: "/events/list/",
-	failureRedirect: "/login",
+	successRedirect: "/generalList/",
+	failureRedirect: "/",
 	failureFlash: true,
 });
 

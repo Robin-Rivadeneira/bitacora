@@ -22,15 +22,19 @@ index.send = async (req, res) => {
 					if (validaciones.usernameUser !== null) {
 						res.redirect("/Login/" + validaciones.idUsers);
 					} else {
-						res.flash("success", "no tiene un usuario con esa cuenta porfavor registrese");
-						res.redirect("/Registro");
+						req.flash("message", "no tpuede ingresar");
 					}
 				} else {
-					res.redirect("/Registro");
+					res.redirect("/register");
 				}
+			}else{
+				req.flash("message", "no tpuede ingresar");
+				res.redirect('/')
 			}
 		}
 	} else {
-		res.redirect("/Registro");
+		res.redirect("/register");
 	}
 }
+
+module.exports = index

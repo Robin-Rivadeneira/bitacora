@@ -35,7 +35,7 @@ const handlebars = exphbs.create({
 })
 
 /// archivos compartidos
-app.set('port', process.env.PORT || 4200);
+app.set('port', process.env.PORT || 4000);
 app.set('views', path.join(__dirname, 'views'));
 app.engine('.hbs', handlebars.engine);
 app.set('view engine', '.hbs');
@@ -77,6 +77,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 //routers
 app.use(require('./router/index.router'))
 app.use(require('./router/register.router'))
-app.use('/events', require('./router/events.router'))
+app.use(require('./router/generalList.router'))
 
 module.exports = app;
