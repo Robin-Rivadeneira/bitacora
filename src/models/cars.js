@@ -5,6 +5,7 @@ const Cars = (sequelize, type) => {
             primaryKey: true,
             autoIncrement: true
         },
+        imageCars: type.STRING,
         licenseplateCars: type.STRING,
         brandCars: type.STRING,
         modelCars: type.STRING,

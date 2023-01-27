@@ -1,0 +1,78 @@
+<link rel="stylesheet" href="/css/events/eventoAdd.css" />
+
+<form action="/cars/add/{{user.idUsers}}" method="post" enctype="multipart/form-data">
+
+    <div id="contenedor">
+        <!-- Aquí comienza la seccion de imagen -->
+        <div id="imagen">
+            <label>Foto del Vehìculo</label>
+            <div id="cambioImagen">
+                <img src="/img/user/NoImagen.jpg" id="imagenPrevisualizacion" />
+            </div>
+            <input type="file" name="imageCars" id="seleccionArchivos" accept="image/*" required />
+        </div>
+        <!-- Aquí termina la sección de imagen -->
+
+        <!-- Aquí comienza el formulario -->
+        <div id="formulario">
+            <div id="titulo">
+                {{#each maxId}}
+                <p>NUEVO CARRO</p>
+                <input type="text" name="idCarro" value="{{maximo}}" id="numero" readonly>
+                {{/each}}
+            </div>
+
+            <div id="Nombre">
+                <label>Matricula:</label>
+                <input type="text" name="licenseplateCars" required />
+            </div>
+
+            <div id="descripcion">
+                <label>Marca:</label>
+                <input type="text" name="brandCars" id="" required>
+            </div>
+
+            <div id="modalidad">
+                <label>Modelo:</label>
+                <input type="text" name="modelCars" id="" required>
+            </div>
+
+            <div id="precio">
+                <label>Color:</label>
+                <input type="text" name="colourCars" id="" required>
+            </div>
+
+            <div id="Categoria">
+                <label>Chasis:</label>
+                <input type="text" name="chassisCars" id="" required>
+            </div>
+
+            <div id="SubCategory">
+                <label>Motor:</label>
+                <input type="text" name="engineCars" id="" required>
+            </div>
+
+            <div id="horaInicio">
+                <label>Año:</label>
+                <input type="text" name=" yearsCars" required />
+            </div>
+        </div>
+        <div id="boton">
+            <button type="button" onclick="modals.paso1()">
+                <div id="iconoGuardar">
+                    <img src="/img/icons/white/save.png">
+                </div>Siguiente
+            </button>
+        </div>
+        <div id="modal">
+            <button type="button" onclick="modals.paso2()"><img src="/img/icons/white/cross.png"></button>
+            <label>¿Desea asignar localidades a su evento?</label>
+            <input type="submit" name="si" id="si" value="Si">
+            <input type="submit" name="no" id="no" value="No">
+        </div>
+    </div>
+</form>
+
+<script src="/js/numero.js"></script>
+<script src="/js/previsualizacion.js"></script>
+<script src="/js/events/evento.js"></script>
