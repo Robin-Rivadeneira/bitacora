@@ -1,19 +1,18 @@
-const licensePlates = (sequelize, type) => {
-    sequelize.define('licensePlates', {
-        idLicensePlates: {
+const Responsible = (sequelize, type) => {
+    return sequelize.define('Responsibles', {
+        idResponsible: {
             type: type.INTEGER,
             primaryKey: true,
             autoIncrement: true
         },
-        registrationYearLicensePlates: type.STRING,
-        registrationExpirationDate: type.STRING,
-        toName: type.STRING,
-        creatLicensePlates: {
+        nameResponsible: type.STRING,
+        observationResponsible: type.STRING,
+        creatResponsible: {
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP'),
             allowNull: false
         },
-        updateLicensePlates: {
+        updateResponsible: {
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP'),
             allowNull: false
@@ -23,4 +22,4 @@ const licensePlates = (sequelize, type) => {
     })
 }
 
-module.exports = licensePlates
+module.exports = Responsible

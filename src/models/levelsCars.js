@@ -1,19 +1,22 @@
-const licensePlates = (sequelize, type) => {
-    sequelize.define('licensePlates', {
-        idLicensePlates: {
+const Levels = (sequelize, type) => {
+    return sequelize.define('Levels', {
+        idLevels: {
             type: type.INTEGER,
             primaryKey: true,
             autoIncrement: true
         },
-        registrationYearLicensePlates: type.STRING,
-        registrationExpirationDate: type.STRING,
-        toName: type.STRING,
-        creatLicensePlates: {
+        gasLevels: type.STRING,
+        motorOilLevels: type.STRING,
+        refrigerantLevels: type.STRING,
+        brakeFluidLevels: type.STRING,
+        WIPPERLevels: type.STRING,
+        transOilLevels: type.STRING,
+        creatLevels: {
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP'),
             allowNull: false
         },
-        updateLicensePlates: {
+        updateLevels: {
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP'),
             allowNull: false
@@ -23,4 +26,4 @@ const licensePlates = (sequelize, type) => {
     })
 }
 
-module.exports = licensePlates
+module.exports = Levels
