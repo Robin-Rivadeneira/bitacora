@@ -1,0 +1,126 @@
+<link rel="stylesheet" href="/css/usuarios/registro.css" type="text/css">
+
+<form action="/register" method="post" enctype="multipart/form-data" id="ocultar">
+    <div id="contenedor">
+        <!-- Aquí comienza la seccion de imagen y texto -->
+        <div id="imagen">
+            <label>Foto del Usuario</label>
+            <div id="cambioImagen">
+                <img src="/img/user/NoImagen.jpg" id="imagenPrevisualizacion">
+            </div>
+            <input type="file" name="imagenUsuario" id="seleccionArchivos" accept="image/*" required>
+        </div>
+
+        <div id="texto">
+            <h2>BIENVENIDO/A</h2>
+            <p>¡Registrate y publica tus eventos al mundo!</p>
+            <div id="botonIniciarSesion">
+                <a href="/login">
+                    <button type="button">
+                        <div id="iconoLogin">
+                            <img src="/img/icons/white/login.png">
+                        </div>Iniciar Sesión
+                    </button>
+                </a>
+            </div>
+        </div>
+        <!-- Aquí termina la sección de imagen y texto -->
+
+        <!-- Aquí comienza el formulario -->
+        <div id="formulario">
+            <div id="titulo">
+                <p>Registro</p>
+                {{#each usuario}}
+                <input type="text" name="idUsuarios" id="numero" value="{{maximo}}" readonly>
+                {{/each}}
+            </div>
+
+            <div id="nombreCLiente">
+                <label>Nombres:</label>
+                <input type="text" name="nameClient" id="nameClient" required>
+            </div>
+
+            <div id="apellidoCliente">
+                <label>Apellidos:</label>
+                <input type="text" name="lastNameClient" id="lastNameClient" required>
+            </div>
+
+            <div id="TipoEleccion">
+                <label>Tipo de Identidicación:</label>
+                <select name="typeIdentificationClient" id="tipoEleccion">
+                    <option>Seleccione un Tipo de Persona</option>
+
+                    <option value="Cedula">Cedula</option>
+                    <option value="Pasaporte">Pasaporte</option>
+                    <option value="Ruc">Ruc</option>
+                </select>
+            </div>
+
+            <div id="identificacion">
+                <label>Identificación:</label>
+                <input type="text" name="identifiacationCardClient" id="pasaporte" required>
+            </div>
+
+            <div id="correoCliente">
+                <label>Correo Electrónico:</label>
+                <input type="text" name="emailClient" id="emailClient" required>
+            </div>
+
+            <div id="celularCliente">
+                <label>Celular:</label>
+                <input type="text" name="phoneClient" id="phoneClient" required>
+            </div>
+
+            <div id="tipoPersona">
+                <label>Tipo de Persona:</label>
+                <select name="nameTypePerson">
+                    <option>Seleccione un Tipo de Persona</option>
+                    {{#each listTypePerson}}
+                    <option value="{{idTypePerson}}">{{nameTypePerson}}</option>
+                    {{/each}}
+                </select>
+            </div>
+
+            <div id="genero">
+                <label>Género:</label>
+                <select name="nameGener">
+                    <option>Seleccione un Género</option>
+                    {{#each listGener}}
+                    <option value="{{idGener}}">{{nameGener}}</option>
+                    {{/each}}
+                </select>
+            </div>
+
+            <div id="Nick">
+                <label>Usuario:</label>
+                <input type="text" name="username" id="usernameClient" required>
+            </div>
+
+            <div id="Contraseña">
+                <label>Contraseña:</label>
+                <input type="password" name="password" id="passIntxt" required>
+            </div>
+
+            <div id="ojo">
+                <button id="visto" type="button" onclick="boton.cambio()">
+                    <img src="/img/icons/white/eyes.png">
+                </button>
+                <button id="equis" type="button" onclick="boton.cambio2()">
+                    <img src="/img/icons/white/cerrado.png">
+                </button>
+            </div>
+
+            <div id="boton">
+                <button type="submit">
+                    <div id="iconoGuardar">
+                        <img src="/img/icons/white/save.png">
+                    </div>Guardar
+                </button>
+            </div>
+        </div>
+    </div>
+</form>
+
+<script src="/js/numero.js"></script>
+<script src="/js/previsualizacion.js"></script>
+<script src="/js/usuarios/login.js"></script>
