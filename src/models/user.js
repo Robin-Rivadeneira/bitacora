@@ -1,17 +1,14 @@
 const user = (sequelize, type) => {
     return sequelize.define('users', {
-        idUser: {
+        idUsers: {
             type: type.INTEGER,
             primaryKey: true,
             autoIncrement: true
         },
-        imagesUser: type.STRING,
         usernameUser: type.STRING(99),
         passwordUser: type.STRING,
         identificationCardUser: type.STRING,
-        passportUser: type.STRING,
-        nameUser: type.STRING,
-        lastNameUser: type.STRING,
+        namesUser: type.STRING,
         emailUser: type.STRING,
         phoneUser: type.STRING,
         creatUser: {

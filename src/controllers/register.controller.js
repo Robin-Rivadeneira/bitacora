@@ -5,13 +5,13 @@ const orm = require("../Database/dataBase.orm");
 const sql = require("../Database/dataBase.sql");
 const CryptoJS = require("crypto-js");
 
-registerCtl.show = async (req, res) => {
-	const usuario = await sql.query(
-		"select max(idClient) AS maximo from clients"
-	);
-	const listGener = await sql.query("select * from geners");
-	const listTypePerson = await sql.query("select * from typePersons");
-	res.render("login/register", { listGener, listTypePerson, usuario });
+registerCtl.showRegister = async (req, res) => {
+	const usuario = await sql.query('select COUNT(*) AS total from users')
+	if (usuario[0].total === 0) {
+		res.render("login/register");
+	} else {
+		res.redirect('/')
+	}
 };
 
 registerCtl.register = passport.authenticate("local.signup", {
@@ -20,8 +20,12 @@ registerCtl.register = passport.authenticate("local.signup", {
 	failureFlash: true,
 });
 
-registerCtl.showLogin = (req, res) => {
-	res.render("login/login");
+registerCtl.showLogin = async (req, res) => {
+	const ids = req.params.id
+	const Usuario = await sql.query('select * from users where idUsers = ?', [ids])
+	const username = await CryptoJS.AES.decrypt(Usuario[0].usernameUser, 'secret')
+	Usuario[0].usernameUser = username.toString(CryptoJS.enc.Utf8)
+	res.render('login/Login', { Usuario });
 };
 
 registerCtl.login = passport.authenticate("local.signin", {
@@ -30,37 +34,18 @@ registerCtl.login = passport.authenticate("local.signin", {
 	failureFlash: true,
 });
 
-registerCtl.showUpdatePassword = (req, res) => {
-	res.render("login/recovery");
-};
-
 registerCtl.showProfile = async (req, res) => {
-	const id = req.user.idClient;
-	const Eventos = await sql.query('select * from eventos where clientIdClient = ? ORDER BY nameEvent ASC', [id]);
-	const Favoritos = await sql.query('select e.*, d.* from eventos e join eventDetails d on d.eventIdEvent = e.idEvent where d.favouriteEventDetail= "favorito" and d.clientIdClient = ? ORDER BY nameEvent ASC',[id]);
-	const list = await sql.query("select * from datosCompletos where idClient = ?", [id]);
-	const nombre = await CryptoJS.AES.decrypt(list[0].nameClient, "secret");
-	list[0].nameClient = nombre.toString(CryptoJS.enc.Utf8);
-	const apellido = await CryptoJS.AES.decrypt(list[0].lastNameClient, "secret");
-	list[0].lastNameClient = apellido.toString(CryptoJS.enc.Utf8);
-	const email = await CryptoJS.AES.decrypt(list[0].emailClient, "secret");
-	list[0].emailClient = email.toString(CryptoJS.enc.Utf8);
-	const celular = await CryptoJS.AES.decrypt(list[0].phoneClient, "secret");
-	list[0].phoneClient = celular.toString(CryptoJS.enc.Utf8);
-	const tipo = await CryptoJS.AES.decrypt(list[0].identificationCardClient, "secret");
-	list[0].identificationCardClient = tipo.toString(CryptoJS.enc.Utf8);
-	res.render("login/perfil", { list, Eventos, Favoritos });
-};
-
-registerCtl.updatePassword = async (req, res) => {
-	const { usernameClient, passwordClient } = req.body;
-	await orm.client
-		.findOne({ where: { usernameClient: usernameClient } })
-		.then((updatePassword) => {
-			updatePassword.update(passwordClient);
-			req.flash("message", "Se actualizo la contraseña");
-			res.redirect("/");
-		});
+	const id = req.user.idUser;
+	const list = await sql.query("select * from datosCompletos where idUser = ?", [id]);
+	const nombre = await CryptoJS.AES.decrypt(list[0].namesUser, "secret");
+	list[0].namesUser = nombre.toString(CryptoJS.enc.Utf8);
+	const email = await CryptoJS.AES.decrypt(list[0].emailUser, "secret");
+	list[0].emailUser = email.toString(CryptoJS.enc.Utf8);
+	const celular = await CryptoJS.AES.decrypt(list[0].phoneUser, "secret");
+	list[0].phoneUser = celular.toString(CryptoJS.enc.Utf8);
+	const tipo = await CryptoJS.AES.decrypt(list[0].identificationCardUser, "secret");
+	list[0].identificationCardUser = tipo.toString(CryptoJS.enc.Utf8);
+	res.render("login/perfil", { list });
 };
 
 registerCtl.logout = (req, res, next) => {

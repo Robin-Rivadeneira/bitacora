@@ -17,24 +17,13 @@ passport.use(
 			passReqToCallback: true,
 		},
 		async (req, username, password, done) => {
-			const rows = await orm.client.findOne({
-				where: { usernameClient: username },
-			});
+			const rows = await orm.user.findOne({ where: { usernameUser: username },});
 			if (rows) {
 				const user = rows;
-				const contraseña = await CryptoJS.AES.decrypt(
-					user.passwordClient,
-					"secret"
-				);
+				const contraseña = await CryptoJS.AES.decrypt( user.passwordUser,"secret");
 				const validPassword = contraseña.toString(CryptoJS.enc.Utf8);
 				if (validPassword == password) {
-					done(
-						null,
-						user,
-						req.flash(
-							"message",
-							"Bienvenido" + " " + user.usernameClient
-						)
+					done( null, user, req.flash( "message", "Bienvenido" + " " + user.usernameUser)
 					);
 				} else {
 					done(null, false, req.flash("message", "Datos incorrectos"));
@@ -59,135 +48,27 @@ passport.use(
 			passReqToCallback: true,
 		},
 		async (req, username, password, done) => {
-			const usuarios = await orm.client.findOne({
-				where: { usernameClient: username },
-			});
+			const usuarios = await orm.user.findOne({ where: { usernameUser: username }});
 			if (usuarios === null) {
-				const { idUsuarios, nameClient, lastNameClient, typeIdentificationClient, identificationCardClient, emailClient, phoneClient, nameTypePerson, nameGener } = req.body;
-				let newClient = {
-					nameClient,
-					lastNameClient,
-					typeIdentificationClient,
-					identificationCardClient,
-					emailClient,
-					phoneClient,
-					usernameClient: username,
-					passwordClient: password,
+				const { namesUser, identificationCardUser, emailUser, phoneUser } = req.body;
+				let newUser = {
+					namesUser,
+					identificationCardUser,
+					emailUser,
+					phoneUser,
+					usernameUser: username,
+					passwordUser: password,
 				};
-				newClient.nameClient = await helpers.encryptPassword(nameClient);
-				newClient.lastNameClient = await helpers.encryptPassword(lastNameClient);
-				newClient.typeIdentificationClient = await helpers.encryptPassword(typeIdentificationClient);
-				newClient.identificationCardClient = await helpers.encryptPassword(identificationCardClient);
-				newClient.emailClient = await helpers.encryptPassword(emailClient);
-				newClient.phoneClient = await helpers.encryptPassword(phoneClient);
-				newClient.passwordClient = await helpers.encryptPassword(password);
+				newUser.namesUser = await helpers.encryptPassword(namesUser);
+				newUser.identificationCardUser = await helpers.encryptPassword(identificationCardUser);
+				newUser.emailUser = await helpers.encryptPassword(emailUser);
+				newUser.phoneUser = await helpers.encryptPassword(phoneUser);
+				newUser.usernameUser = await helpers.encryptPassword(username);
+				newUser.passwordUser = await helpers.encryptPassword(password);
 
-				let newDetail = {
-					clientIdClient: idUsuarios,
-					generIdGener: nameGener,
-					typePersonIdTypePerson: nameTypePerson,
-				};
+				newUser.id = resultado.insertId;
 
-				const resultado = await orm.client.create(newClient);
-				await orm.clientDetail.create(newDetail);
-
-				newClient.id = resultado.insertId;
-
-				const imagenUsuario = req.files.imagenUsuario;
-				const validacion = path.extname(imagenUsuario.name);
-
-				const extencion = [".PNG", ".JPG", ".JPEG", ".GIF", ".TIF", ".png", ".jpg", ".jpeg", ".gif", ".tif", ".JFIF"];
-
-				if (!extencion.includes(validacion)) {
-					req.flash("success", "Imagen no compatible.");
-				}
-
-				if (!req.files) {
-					req.flash("success", "Imagen no insertada.");
-				}
-
-				const ubicacion = __dirname + "/../public/img/user/" + imagenUsuario.name;
-				const ubicacion2 = __dirname + "/../../../adminevents/src/public/img/user" + imagenUsuario.name;
-
-				imagenUsuario.mv(ubicacion, function (err) {
-					if (err) {
-						return req.flash("message", err);
-					}
-					sql.query( "UPDATE clients SET imagesClient = ? WHERE idClient = ?", [imagenUsuario.name, idUsuarios]
-					);
-					console.log("Imagen de usuario ingresada");
-				});
-
-				imagenUsuario.mv(ubicacion2, function (err) {
-					if (err) {
-						console.log(err);
-						return req.flash("message", err);
-					}
-				});
-
-				return done(null, newClient);
-			} else {
-				if (usuarios) {
-					const usuario = usuarios;
-					if (username == usuario.usernameClient) {
-						done(null, false, req.flash("message", "El nombre de usuario ya existe.") );
-					} else {
-						const { idUsuarios, nameClient, lastNameClient, typeIdentificationClient, identificationCardClient, emailClient, phoneClient, nameTypePerson, nameGener } = req.body;
-						let newClient = {
-							nameClient,
-							lastNameClient,
-							typeIdentificationClient,
-							identificationCardClient,
-							emailClient,
-							phoneClient,
-							usernameClient: username,
-							passwordClient: password,
-						};
-						newClient.nameClient = await helpers.encryptPassword(nameClient);
-						newClient.lastNameClient = await helpers.encryptPassword(lastNameClient);
-						newClient.typeIdentificationClient = await helpers.encryptPassword(typeIdentificationClient);
-						newClient.identificationCardClient = await helpers.encryptPassword(identificationCardClient);
-						newClient.emailClient = await helpers.encryptPassword(emailClient);
-						newClient.phoneClient = await helpers.encryptPassword(phoneClient);
-						newClient.passwordClient = await helpers.encryptPassword(password);
-
-						let newDetail = {
-							clientIdClient: idUsuarios,
-							generIdGener: nameGener,
-							typePersonIdTypePerson: nameTypePerson,
-						};
-
-						const resultado = await orm.client.create(newClient);
-						await orm.clientDetail.create(newDetail);
-
-						newClient.id = resultado.insertId;
-
-						const imagenUsuario = req.files.imagenUsuario;
-						const validacion = path.extname(imagenUsuario.name);
-
-						const extencion = [".PNG", ".JPG", ".JPEG", ".GIF", ".TIF", ".png", ".jpg", ".jpeg", ".gif", ".tif", ".JFIF"];
-
-						if (!extencion.includes(validacion)) {
-							req.flash("success", "Imagen no compatible.");
-						}
-
-						if (!req.files) {
-							req.flash("success", "Imagen no insertada.");
-						}
-
-						const ubicacion = __dirname + "/../public/img/user/" + imagenUsuario.name;
-
-						imagenUsuario.mv(ubicacion, function (err) {
-							if (err) {
-								return req.flash("message", err);
-							}
-							sql.query( "UPDATE clients SET imagesClient = ? WHERE idClient = ?", [imagenUsuario.name, idUsuarios] );
-							console.log("Imagen de usuario ingresada");
-						});
-
-						return done(null, newClient);
-					}
-				}
+				return done(null, newUser);
 			}
 		}
 	)
