@@ -11,6 +11,8 @@ const Motorcycles = (sequelize, type) => {
         colourMotorcycles:type.STRING,
         chassisMotorcycles: type.STRING,
         engineMotorcycles: type.STRING,
+        typeCars: type.STRING,
+        classCars:type.STRING,
         yearsMotorcycles: type.STRING,
         creatMotorcycles: {
             type: 'TIMESTAMP',

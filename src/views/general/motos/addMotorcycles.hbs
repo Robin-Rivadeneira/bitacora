@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="/css/events/eventoAdd.css" />
 
-<form action="/cars/add/{{user.idUsers}}" method="post" enctype="multipart/form-data">
+<form action="/Motorcycles/add/{{user.idUsers}}" method="post" enctype="multipart/form-data">
 
     <div id="contenedor">
         <!-- Aquí comienza la seccion de imagen -->
@@ -9,7 +9,7 @@
             <div id="cambioImagen">
                 <img src="/img/user/NoImagen.jpg" id="imagenPrevisualizacion" />
             </div>
-            <input type="file" name="imageCars" id="seleccionArchivos" accept="image/*" required />
+            <input type="file" name="imageMotorcycles" id="seleccionArchivos" accept="image/*" required />
         </div>
         <!-- Aquí termina la sección de imagen -->
 
@@ -18,43 +18,54 @@
             <div id="titulo">
                 {{#each maxId}}
                 <p>NUEVO CARRO</p>
-                <input type="text" name="idCarro" value="{{maximo}}" id="numero" readonly>
+                <input type="text" name="idMoto" value="{{maximo}}" id="numero" readonly>
                 {{/each}}
             </div>
 
-            <div id="Nombre">
+            <div id="Matricula">
                 <label>Matricula:</label>
-                <input type="text" name="licenseplateCars" required />
+                <input type="text" name="licenseplateMotorcycles" required />
             </div>
 
-            <div id="descripcion">
+            <div id="Marca">
                 <label>Marca:</label>
-                <input type="text" name="brandCars" id="" required>
+                <input type="text" name="brandMotorcycles" id="" required>
             </div>
 
-            <div id="modalidad">
+            <div id="Modelo">
                 <label>Modelo:</label>
-                <input type="text" name="modelCars" id="" required>
+                <input type="text" name="modelMotorcycles" id="" required>
             </div>
 
-            <div id="precio">
+             <div id="Tipo">
+                <label>Tipo:</label>
+                <input type="text" name="typeMotorcycles" id="" required>
+            </div>
+
+             <div id="Clase">
+                <label>Clase:</label>
+                <input type="text" name="classMotorcycles" id="" required>
+            </div>
+
+
+            <div id="Color">
                 <label>Color:</label>
-                <input type="text" name="colourCars" id="" required>
+                <input type="text" name="colourMotorcycles" id="" required>
             </div>
 
-            <div id="Categoria">
+            <div id="Chasis">
                 <label>Chasis:</label>
-                <input type="text" name="chassisCars" id="" required>
+                <input type="text" name="chassisMotorcycles" id="" required>
             </div>
 
-            <div id="SubCategory">
+            <div id="Motor">
                 <label>Motor:</label>
-                <input type="text" name="engineCars" id="" required>
+                <input type="text" name="engineMotorcycles" id="" required>
             </div>
 
-            <div id="horaInicio">
+            <div id="Año">
                 <label>Año:</label>
-                <input type="text" name=" yearsCars" required />
+                <input type="text" name=" yearsMotorcycles" required />
             </div>
         </div>
         <div id="boton">
@@ -63,12 +74,6 @@
                     <img src="/img/icons/white/save.png">
                 </div>Siguiente
             </button>
-        </div>
-        <div id="modal">
-            <button type="button" onclick="modals.paso2()"><img src="/img/icons/white/cross.png"></button>
-            <label>¿Desea asignar localidades a su evento?</label>
-            <input type="submit" name="si" id="si" value="Si">
-            <input type="submit" name="no" id="no" value="No">
         </div>
     </div>
 </form>

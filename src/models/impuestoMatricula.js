@@ -7,9 +7,12 @@ const TuitionTax = (sequelize, type) => {
         },
         rtvTuitionTax: type.STRING,
         commissionTuitionTax: type.STRING,
+        commission2TuitionTax: type.STRING,
+        commission3TuitionTax: type.STRING,
+        commission4TuitionTax: type.STRING,
         vehicleTaxTuitionTax: type.STRING,
         tuitionTuitionTax: type.STRING,
-        roadBackgroundTuitionTax: type.STRING,
+        roadFundRegistrationTax: type.STRING,
         totalTuitionTax: type.STRING,
         creatTuitionTax: {
             type: 'TIMESTAMP',

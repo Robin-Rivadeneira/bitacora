@@ -1,6 +1,9 @@
 <link rel="stylesheet" href="style.css">
-<form action="/cars/matricula/add/" method="post">
+<form action="/cars/kilometraje/add/" method="post">
     <div id="datosCarro">
+        <div id="titulo">
+            <p>Datos del Vehiculo</p>
+        </div>
         <div id="marca">
             <label>Marca:</label>
             <p></p>
@@ -34,12 +37,7 @@
             <p></p>
         </div>
     </div>
-    <div id="numeroDeColumnas">
-        <label>Columnas Necesarias:</label>
-        <input type="text" name="" id="columnas">
-        <button type="button" onclick="tabla.generarTablas()">Generar</button>
-    </div>
-    <div id="formulario"></div>
+    <div id="hojaConsumo"></div>
 </form>
 
-<script src="/js/tabla/tabla.js"></script>
+<script src="/js/tabla/hojaConbustible.js"></script>
