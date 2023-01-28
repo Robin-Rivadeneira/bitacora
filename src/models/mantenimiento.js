@@ -16,6 +16,7 @@ const Maintenance = (sequelize, type) => {
         hourFinishMaintenance: type.STRING,
         timeMaintenance: type.STRING,
         remarksMaintenance: type.STRING,
+        descriptionMaintenance: type.STRING,
         creatMaintenance: {
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP'),

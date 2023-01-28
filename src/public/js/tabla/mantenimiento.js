@@ -27,6 +27,7 @@ class mantenimiento{
             codigoTabla += "<td><input type='text' name='mileageMaintenance' id=''></td>"
             codigoTabla += "<td><input type='text' name='amountMaintenance' id=''></td>"
             codigoTabla += "<td><input type='text' name='typeMaintenance' id=''></td>"
+            codigoTabla += "<td><input type='text' name='descriptionMaintenance' id=''></td>"
             codigoTabla += "<td><input type='text' name='maintenanceManager' id=''></td>"
             codigoTabla += "<td><input type='text' name='ubicationMaintenance' id=''></td>"
             codigoTabla += "<td><input type='text' name='preciMaintenance' id=''></td>"
