@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="/css/events/eventoAdd.css" />
+<link rel="stylesheet" href="/css/autos/agregar.css" />
 
 <form action="/cars/add/{{user.idUsers}}" method="post" enctype="multipart/form-data">
 
@@ -37,12 +37,12 @@
                 <input type="text" name="modelCars" id="" required>
             </div>
 
-             <div id="Tipo">
+            <div id="Tipo">
                 <label>Tipo:</label>
                 <input type="text" name="typeCars" id="" required>
             </div>
 
-             <div id="Clase">
+            <div id="Clase">
                 <label>Clase:</label>
                 <input type="text" name="classCars" id="" required>
             </div>
@@ -69,10 +69,10 @@
             </div>
         </div>
         <div id="boton">
-            <button type="button" onclick="modals.paso1()">
+            <button type="submit">
                 <div id="iconoGuardar">
                     <img src="/img/icons/white/save.png">
-                </div>Siguiente
+                </div>
             </button>
         </div>
     </div>
@@ -80,4 +80,3 @@
 
 <script src="/js/numero.js"></script>
 <script src="/js/previsualizacion.js"></script>
-<script src="/js/events/evento.js"></script>

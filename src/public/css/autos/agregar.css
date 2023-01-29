@@ -1,0 +1,121 @@
+#imagen{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    max-width: 10%;
+    max-height: 15%;
+    top: 5%;
+    left: 2%;
+}
+
+#imagen img{
+    width: 100%;
+    height: 100%;
+}
+
+#formulario{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    max-width: 80%;
+    max-height: 62%;
+    top: 13%;
+    left: 15%;
+    background-color: #0097e7;
+}
+
+#Marca,
+#Modelo,
+#Tipo,
+#Clase,
+#Color,
+#Chasis,
+#Motor,
+#Año,
+#Matricula{
+    position: absolute;
+    width: 100%;
+    max-width: 40%;
+}
+
+#Marca,
+#Color,
+#Tipo,
+#Motor,
+#Año{
+    left: 5%;
+}
+
+#Modelo,
+#Clase,
+#Chasis,
+#Matricula{
+    left: 55%;
+}
+
+#Marca,
+#Modelo{
+    top: 15%;
+}
+
+#Tipo,
+#Clase{
+    top: 30%;
+}
+
+#Color,
+#Chasis{
+    top: 45%;
+}
+
+#Año,
+#Matricula{
+    top: 60%;
+}
+
+#Motor{
+    top: 75%;
+}
+
+#titulo{
+    position: absolute;
+    top: 5%;
+    width: 100%;
+}
+
+#numero{
+    display: none;
+}
+
+#boton {
+    position: absolute;
+    bottom: 15%;
+    right: 6%;
+    width: 5%;
+    height: 8.50%;
+}
+
+#boton button {
+    text-align: right;
+    background-color: #0097e7;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#iconoGuardar {
+    background-color: #1232bd;
+    border-radius: 10%;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    margin-left: 0%;
+    margin-top: 0%;
+}
+
+#iconoGuardar img {
+    max-width: 100%;
+    max-height: 100%;
+}

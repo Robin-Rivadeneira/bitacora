@@ -119,5 +119,17 @@ motorcycles.hasMany(matriculas)
 matriculas.belongsTo(motorcycles)
 
 module.exports = {
-	user
+	user,
+	cars,
+	conbustible,
+	destino,
+	detalleKilometraje,
+	impuestoMatricula,
+	kilometraje,
+	levelsCars,
+	mantenimiento,
+	matriculas,
+	motorcycles,
+	responsible,
+	seguridadElementos
 };
