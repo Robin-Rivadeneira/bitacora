@@ -5,6 +5,7 @@ const licensePlate = (sequelize, type) => {
             primaryKey: true,
             autoIncrement: true
         },
+        datelicensePlates: type.STRING,
         registrationYearLicensePlates: type.STRING,
         registrationExpirationDateLicensePlates: type.STRING,
         toNameLicensePlates: type.STRING,

@@ -2,16 +2,27 @@
 <form action="/cars/list/{{user.idUsers}}" method="get"></form>
 <div id="contenedor">
     <div class="row">
-        <div id="tarjeta">
+        {{#each list}}
+        <div id="tarjetas">
             <div id="imagen">
-                <img src="/img/cars/" alt="">
+                <img src="/img/cars/{{imageCars}}" alt="">
             </div>
-            <div id="nombre">
-                <p></p>
+            <div id="matricula">
+                <p>{{licenseplateCars}}</p>
+            </div>
+            <div id="editar">
+                <a href="/cars/edit/{{idCars}}"><button type="button">Actualizar</button></a>
+            </div>
+            <div id="seleccionar">
+                <a href="/cars/matricula/list/{{idCars}}"><button type="button">Matricula</button></a>
+                <a href="/cars/kilometraje/add/{{idCars}}"><button type="button">kilometraje</button></a>
+                <a href="/cars/implementos/add/{{idCars}}"><button type="button">Implementos</button></a>
+                 <a href="/cars/mantenimiento/list/{{idCars}}"><button type="button">Mantenimiento</button></a>
             </div>
         </div>
+        {{/each}}
     </div>
 </div>
 <div id="boton">
-   <a href="/cars/add/{{user.idUsers}}"><button type="button"><img src="/img/icons/black/plus.png" alt="" id="plus"></button></a>
+    <a href="/cars/add/{{user.idUsers}}"><button type="button"><img src="/img/icons/black/plus.png" alt="" id="plus"></button></a>
 </div>

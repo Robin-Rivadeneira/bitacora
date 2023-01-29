@@ -1,72 +1,81 @@
 <link rel="stylesheet" href="/css/autos/editar.css" />
 
-<form action="/cars/edit/{{user.idUsers}}" method="post" enctype="multipart/form-data">
-
+{{#each list}}
+<form action="/cars/edit/{{idCars}}" method="post" enctype="multipart/form-data">
     <div id="contenedor">
-        {{#each maxId}}
         <!-- Aquí comienza la seccion de imagen -->
         <div id="imagen">
             <label>Foto del Vehìculo</label>
             <div id="cambioImagen">
                 <img src="/img/cars/{{imageCars}}" id="imagenPrevisualizacion" />
             </div>
-            <input type="file" name="imageCars" id="seleccionArchivos" accept="image/*" required />
+            <input type="file" name="imageCars" id="seleccionArchivos" accept="image/*"/>
         </div>
         <!-- Aquí termina la sección de imagen -->
 
         <!-- Aquí comienza el formulario -->
         <div id="formulario">
             <div id="titulo">
-                <p>NUEVO CARRO</p>
+                <p>ACTUALIZAR CARRO</p>
                 <input type="text" name="idCarro" value="{{idCars}}" id="numero" readonly>
             </div>
 
-            <div id="Nombre">
+          <div id="Matricula">
                 <label>Matricula:</label>
                 <input type="text" name="licenseplateCars" required value="{{licenseplateCars}}">
             </div>
 
-            <div id="descripcion">
+            <div id="Marca">
                 <label>Marca:</label>
                 <input type="text" name="brandCars" id="" required value="{{brandCars}}">
             </div>
 
-            <div id="modalidad">
+            <div id="Modelo">
                 <label>Modelo:</label>
                 <input type="text" name="modelCars" id="" required value="{{modelCars}}">
             </div>
 
-            <div id="precio">
+            <div id="Tipo">
+                <label>Tipo:</label>
+                <input type="text" name="typeCars" id="" required value="{{typeCars}}">
+            </div>
+
+            <div id="Clase">
+                <label>Clase:</label>
+                <input type="text" name="classCars" id="" required value="{{classCars}}">
+            </div>
+
+
+            <div id="Color">
                 <label>Color:</label>
                 <input type="text" name="colourCars" id="" required value="{{colourCars}}">
             </div>
 
-            <div id="Categoria">
+            <div id="Chasis">
                 <label>Chasis:</label>
                 <input type="text" name="chassisCars" id="" required value="{{chassisCars}}">
             </div>
 
-            <div id="SubCategory">
+            <div id="Motor">
                 <label>Motor:</label>
                 <input type="text" name="engineCars" id="" required value="{{engineCars}}">
             </div>
 
-            <div id="horaInicio">
+            <div id="Año">
                 <label>Año:</label>
-                <input type="text" name=" yearsCars" required value="{{yearsCars}}">
+                <input type="text" name="yearsCars" required value="{{yearsCars}}">
             </div>
         </div>
         <div id="boton">
-            <button type="button" onclick="modals.paso1()">
+            <button type="submit">
                 <div id="iconoGuardar">
                     <img src="/img/icons/white/save.png">
-                </div>Siguiente
+                </div>
             </button>
         </div>
-        {{/each}}
     </div>
+{{/each}}
 </form>
 
-<script src="/js/numero.js"></script>
 <script src="/js/previsualizacion.js"></script>
 <script src="/js/events/evento.js"></script>

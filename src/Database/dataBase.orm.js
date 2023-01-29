@@ -53,6 +53,9 @@ const motorcycles = motocyclesModel(sequelize, Sequelize)
 const responsible = responsableModel(sequelize, Sequelize)
 const seguridadElementos = seguridadElementosModelos(sequelize, Sequelize)
 
+matriculas.hasMany(impuestoMatricula)
+impuestoMatricula.belongsTo(matriculas)
+
 user.hasMany(cars)
 cars.belongsTo(user)
 user.hasMany(conbustible)

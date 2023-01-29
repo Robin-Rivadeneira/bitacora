@@ -78,5 +78,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(require('./router/index.router'))
 app.use(require('./router/register.router'))
 app.use(require('./router/generalList.router'))
+app.use('/cars',require('./router/matricula.router'))
 
 module.exports = app;

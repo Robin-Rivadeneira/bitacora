@@ -3,6 +3,7 @@ const sql = require("../dataBase/dataBase.sql");
 const orm = require("../dataBase/dataBase.orm");
 
 const CryptoJS = require("crypto-js");
+const { create } = require("express-handlebars");
 
 index.show = (req, res) => {
 	res.render('index');
@@ -25,6 +26,7 @@ index.send = async (req, res) => {
 						req.flash("message", "no tpuede ingresar");
 					}
 				} else {
+					await sql.query('CREATE VIEW matriculas AS SELECT l.idlicensePlate,l.datelicensePlates,l.registrationYearLicensePlates,l.registrationExpirationDateLicensePlates,l.toNameLicensePlates, t.* FROM licensePlates l JOIN tuitiontaxes t ON t.licensePlateIdlicensePlate =l.idlicensePlate')
 					res.redirect("/register");
 				}
 			}else{

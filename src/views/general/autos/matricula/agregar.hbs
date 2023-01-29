@@ -1,42 +1,44 @@
-<link rel="stylesheet" href="style.css">
-<form action="/cars/matricula/add/" method="post">
+<link rel="stylesheet" href="/css/matricula/agregar.css">
+{{#each list}}
+<form action="/cars/matricula/add/{{idCars}}" method="post">
     <div id="datosCarro">
         <div id="marca">
             <label>Marca:</label>
-            <p></p>
+            <p>{{brandCars}}</p>
         </div>
         <div id="clase">
             <label>Clase:</label>
-            <p></p>
+            <p>{{classCars}}</p>
         </div>
         <div id="tipo">
             <label>Tipo:</label>
-            <p></p>
+            <p>{{typeCars}}</p>
         </div>
         <div id="año">
             <label>Año:</label>
-            <p></p>
+            <p>{{yearsCars}}</p>
         </div>
         <div id="placa">
             <label>Placa:</label>
-            <p></p>
+            <p>{{licenseplateCars}}</p>
         </div>
         <div id="modelo">
             <label>Modelo:</label>
-            <p></p>
+            <p>{{brandCars}}</p>
         </div>
         <div id="motor">
             <label>Motor:</label>
-            <p></p>
+            <p>{{engineCars}}</p>
         </div>
         <div id="chasis">
             <label>Chasis:</label>
-            <p></p>
+            <p>{{chassisCars}}</p>
         </div>
     </div>
+{{/each}}
     <div id="numeroDeColumnas">
         <label>Columnas Necesarias:</label>
-        <input type="text" name="" id="columnas">
+        <input type="text" name="columnas" id="columnas">
         <button type="button" onclick="tabla.generarTablas()">Generar</button>
     </div>
     <div id="formulario"></div>
