@@ -2,7 +2,7 @@ class mantenimiento{
     constructor() {
         this.numeroColumna = document.getElementById('columnas')
     }
-    tabla1(){
+    generarTablas(){
         var codigoTabla = "<table><tbody>"
         codigoTabla += "<tr>"
         codigoTabla += "<td>Fecha</td>"
@@ -20,7 +20,7 @@ class mantenimiento{
         codigoTabla += "</tr>"
         codigoTabla += "<tr>"
         for (let i = 0; i < parseInt(this.numeroColumna.value); i++) {
-            codigoTabla += "<td><input type='text' name='dateMaintenance' id=''></td>"
+            codigoTabla += "<td><input type='date' name='dateMaintenance' id=''></td>"
             codigoTabla += "<td><input type='text' name='hourStartMaintenance' id=''></td>"
             codigoTabla += "<td><input type='text' name='hourFinishMaintenance' id=''></td>"
             codigoTabla += "<td><input type='text' name='timeMaintenance' id=''></td>"
@@ -31,9 +31,13 @@ class mantenimiento{
             codigoTabla += "<td><input type='text' name='maintenanceManager' id=''></td>"
             codigoTabla += "<td><input type='text' name='ubicationMaintenance' id=''></td>"
             codigoTabla += "<td><input type='text' name='preciMaintenance' id=''></td>"
-            codigoTabla += "<td><input type='text' name='preciMaintenance' id=''></td>"
+            codigoTabla += "<td><input type='text' name='descriptionMaintenance' id=''></td>"
             codigoTabla += "</tr>"
         }
         codigoTabla += "</tbody></table>"
+        codigoTabla += '<div id="boton"><button type="submit"><div id="iconoGuardar"><img src="/img/icons/white/save.png"></div></button></div>'
+        document.getElementById('mantenimiento').innerHTML = codigoTabla
     }
 }
+
+let tabla = new mantenimiento()
