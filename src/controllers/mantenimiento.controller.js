@@ -10,6 +10,8 @@ mantenimiento.showMantenimiento = async (req, res) => {
 }
 
 mantenimiento.sendMantenimiento = async (req, res) => {
+    const id = req.params.id
+    const ids = req.user.idUsers
     const { columnas, dateMaintenance, hourStartMaintenance, hourFinishMaintenance, timeMaintenance, mileageMaintenance, amountMaintenance, typeMaintenance, descriptionMaintenance, maintenanceManager, ubicationMaintenance, preciMaintenance, remarksMaintenance } = req.body
     const newSend = {
         dateMaintenance,
@@ -23,7 +25,9 @@ mantenimiento.sendMantenimiento = async (req, res) => {
         maintenanceManager,
         ubicationMaintenance,
         preciMaintenance,
-        remarksMaintenance
+        remarksMaintenance,
+        CarIdCars: id,
+        userIdUsers: ids
     }
 
     if (parseInt(columnas) > 1) {
@@ -41,7 +45,7 @@ mantenimiento.listMantenimiento = async (req, res) => {
     const id = req.params.id
     const list = await sql.query('select * from cars where idCars = ?', [id])
     const mantenimiento = await sql.query('select * from maintenances')
-    res.render('general/autos/mantenimiento/editar', { list, mantenimiento });
+    res.render('general/autos/mantenimiento/lista', { list, mantenimiento });
 }
 
 mantenimiento.bringMantenimiento = async (req, res) => {
