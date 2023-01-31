@@ -38,7 +38,7 @@ mantenimiento.sendMantenimiento = async (req, res) => {
         await orm.mantenimiento.create(newSend)
     }
     req.flash('success', 'Guardado')
-    res.redirect('/cars/matricula/list/' + id);
+    res.redirect('/cars/mantenimiento/list/' + id);
 }
 
 mantenimiento.listMantenimiento = async (req, res) => {
@@ -46,6 +46,13 @@ mantenimiento.listMantenimiento = async (req, res) => {
     const list = await sql.query('select * from cars where idCars = ?', [id])
     const mantenimiento = await sql.query('select * from maintenances')
     res.render('general/autos/mantenimiento/lista', { list, mantenimiento });
+}
+
+mantenimiento.detalleMantenimiento = async (req, res) => {
+    const id = req.params.id
+    const list = await sql.query('select * from cars where idCars = ?', [id])
+    const mantenimiento = await sql.query('select * from maintenances')
+    res.render('general/autos/mantenimiento/detalle', { list, mantenimiento });
 }
 
 mantenimiento.bringMantenimiento = async (req, res) => {
@@ -63,7 +70,7 @@ mantenimiento.updateMantenimiento = async (req, res) => {
         }
     }
     req.flash('success', 'Guardado')
-    res.redirect('/cars/matricula/list/' + id);
+    res.redirect('/cars/mantenimiento/list/' + id);
 }
 
 module.exports = mantenimiento

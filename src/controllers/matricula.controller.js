@@ -56,9 +56,8 @@ matricula.list = async (req, res) => {
 
 matricula.detalle = async (req, res) => {
     const id = req.params.id
-    const list = await sql.query('select * from cars where idCars = ?', [id])
-    const matriculas = await sql.query('select * from matriculas where idlicensePlate = ?', [id])
-    res.render('general/autos/matricula/detalleLista', { list, matriculas });
+    const matriculas = await sql.query('select * from matriculas m JOIN cars c ON m.CarIdCars = c.idCars')
+    res.render('general/autos/matricula/detalleLista', { matriculas });
 }
 
 matricula.traer = async (req, res) => {

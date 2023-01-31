@@ -10,6 +10,54 @@
     height: 70px;
 }
 
+#datosCarro{
+    width: 300px;
+    height: 300px;
+    margin-left: 10px;
+}
+
+#marca,
+#clase,
+#tipo,
+#año,
+#placa,
+#modelo,
+#motor,
+#chasis,
+#responsable{
+    border: 1px solid black;
+    text-align: center;
+}
+
+#marca label,
+#clase label,
+#tipo label,
+#año label,
+#placa label,
+#modelo label,
+#motor label,
+#chasis label{
+    margin-right: 220px;
+}
+
+#responsable label{
+    width: 300px;
+    font-size: 15px;
+    margin-right: 180px;
+}
+
+#marca p,
+#clase p,
+#tipo p,
+#año p,
+#placa p,
+#modelo p,
+#motor p,
+#chasis p,
+#responsable p{
+    margin-top: -30px;
+}
+
 #Fecha{
     width: 300px;
     margin-top: -250px;
@@ -30,15 +78,15 @@
     margin-left: 1310px;
 }
 
+#tabla{
+    text-align: center;
+    margin-top: 270px;
+    margin-left: 225px;
+}
+
 #btnCrearPdf{
     width: 180px;
     margin-top: 30px;
-    margin-left: 1700px;
-}
-
-#boton{
-    width: 180px;
-    margin-top: -200px;
     margin-left: 1700px;
 }
 
@@ -55,11 +103,8 @@ input{
     border-top-color: transparent;
     background-color: transparent;
 }
-
 table {
     border-collapse: collapse;
-    text-align: center;
-    margin-top: 50px;
 }
  
 table,

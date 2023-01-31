@@ -26,7 +26,6 @@ index.send = async (req, res) => {
 						req.flash("message", "no tpuede ingresar");
 					}
 				} else {
-					await sql.query('CREATE VIEW matriculas AS SELECT l.idlicensePlate,l.datelicensePlates,l.registrationYearLicensePlates,l.registrationExpirationDateLicensePlates,l.toNameLicensePlates, t.* FROM licensePlates l JOIN tuitiontaxes t ON t.licensePlateIdlicensePlate =l.idlicensePlate')
 					res.redirect("/register");
 				}
 			}else{
@@ -35,6 +34,7 @@ index.send = async (req, res) => {
 			}
 		}
 	} else {
+		await sql.query('CREATE VIEW matriculas AS SELECT l.idlicensePlate,l.datelicensePlates,l.registrationYearLicensePlates,l.registrationExpirationDateLicensePlates,l.toNameLicensePlates, t.* FROM licensePlates l JOIN tuitiontaxes t ON t.licensePlateIdlicensePlate =l.idlicensePlate')
 		res.redirect("/register");
 	}
 }

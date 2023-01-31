@@ -1,47 +1,29 @@
 <link rel="stylesheet" href="/css/matricula/detalle.css">
+<script src="/js/pdf/html2pdf.bundle.min.js"></script>
+<button id="btnCrearPdf" type="button">
+    <i class="fas fa-file-pdf"></i> Exportar pdf
+</button>
 {{#each list}}
 <form action="/cars/matricula/detailList/{{idCars}}"></form>
-<div id="datosCarro">
-    <div id="marca">
-        <label>Marca:</label>
-        <p>{{brandCars}}</p>
-    </div>
-    <div id="clase">
-        <label>Clase:</label>
-        <p>{{classCars}}</p>
-    </div>
-    <div id="tipo">
-        <label>Tipo:</label>
-        <p>{{typeCars}}</p>
-    </div>
-    <div id="año">
-        <label>Año:</label>
-        <p>{{yearsCars}}</p>
-    </div>
-    <div id="placa">
-        <label>Placa:</label>
-        <p>{{licenseplateCars}}</p>
-    </div>
-    <div id="modelo">
-        <label>Modelo:</label>
-        <p>{{brandCars}}</p>
-    </div>
-    <div id="motor">
-        <label>Motor:</label>
-        <p>{{engineCars}}</p>
-    </div>
-    <div id="chasis">
-        <label>Chasis:</label>
-        <p>{{chassisCars}}</p>
-    </div>
-</div>
 {{/each}}
-<button id="btnExportar" type="button">
-    <i class="fas fa-file-excel"></i> Exportar datos a Excel
-</button>
+<div id="texto">
+    <p>RACINGMOTOS ESCUELA DE CONDUCCIÓN </p>
+    <p>LISTADO AGENCIA METROPOLITANA DE TRÀNSITO</p>
+</div>
+<div id="imagen">
+    <img src="/img/logos/RACING ISOTIPO VERTICAL.jpg" alt="">
+</div>
 <table id="tabla">
     <tbody>
         <tr>
+            <td>Marca</td>
+            <td>Clase</td>
+            <td>Tipo</td>
+            <td>Año</td>
+            <td>Placa</td>
+            <td>Modelo</td>
+            <td>Motor</td>
+            <td>Chasis</td>
             <td>Fecha</td>
             <td>AÑO MATRICULA</td>
             <td>FECHA CADUCA MATRICULA</td>
@@ -58,6 +40,30 @@
         </tr>
         <tr>
             {{#each matriculas}}
+            <td>
+                <p>{{brandCars}}</p>
+            </td>
+            <td>
+                <p>{{classCars}}</p>
+            </td>
+            <td>
+                <p>{{typeCars}}</p>
+            </td>
+            <td>
+                <p>{{yearsCars}}</p>
+            </td>
+            <td>
+                <p>{{licenseplateCars}}</p>
+            </td>
+            <td>
+                <p>{{modelCars}}</p>
+            </td>
+            <td>
+                <p>{{engineCars}}</p>
+            </td>
+            <td>
+                <p>{{chassisCars}}</p>
+            </td>
             <td>
                 <p>{{datelicensePlates}}</p>
             </td>
@@ -106,4 +112,4 @@
     {{/each}}
 </div>
 
-<script src="/js/exel/exel.js"></script>
+<script src="/js/pdf/pdf.js"></script>

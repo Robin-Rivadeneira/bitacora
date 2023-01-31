@@ -13,6 +13,8 @@ const matriculasModel = require('../models/matriculas')
 const motocyclesModel = require('../models/motorcycles')
 const responsableModel = require('../models/responsible')
 const seguridadElementosModelos = require('../models/seguridadElementos')
+const vendorModelos = require('../models/proveedor')
+const ordenTrabajoModelos = require('../models/ordenTrabajo')
 
 
 const{ MYSQLHOST, MYSQLUSER, MYSQLPASSWORD, MYSQLDATABASE, MYSQLPORT, MYSQL_URI, } = require ("../keys");
@@ -52,9 +54,17 @@ const matriculas = matriculasModel(sequelize, Sequelize)
 const motorcycles = motocyclesModel(sequelize, Sequelize)
 const responsible = responsableModel(sequelize, Sequelize)
 const seguridadElementos = seguridadElementosModelos(sequelize, Sequelize)
+const vendor = vendorModelos(sequelize, Sequelize)
+const ordenTrabajo = ordenTrabajoModelos(sequelize, Sequelize)
 
 matriculas.hasMany(impuestoMatricula)
 impuestoMatricula.belongsTo(matriculas)
+
+vendor.hasMany(ordenTrabajo)
+ordenTrabajo.belongsTo(vendor)
+
+cars.hasMany(ordenTrabajo)
+ordenTrabajo.belongsTo(cars)
 
 user.hasMany(cars)
 cars.belongsTo(user)
@@ -134,5 +144,7 @@ module.exports = {
 	matriculas,
 	motorcycles,
 	responsible,
-	seguridadElementos
+	seguridadElementos,
+	vendor,
+	ordenTrabajo
 };
