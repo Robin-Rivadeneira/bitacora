@@ -75,6 +75,11 @@ ordenTrabajo.listOrderWork = async (req, res) => {
     res.render('general/autos/ordenTrabajo/lista', { orderWork });
 }
 
+ordenTrabajo.detalleOrderWork = async (req, res) => {
+    const orderWork = await sql.query('select * from orderWorks')
+    res.render('general/autos/ordenTrabajo/detalle', { orderWork });
+}
+
 ordenTrabajo.bringOrderWork = async (req, res) => {
     const id = req.params.id
     const orderWork = await sql.query('select * from orderWorks where idOrderWork = ?', [id])

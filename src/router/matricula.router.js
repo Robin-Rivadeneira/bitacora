@@ -9,7 +9,7 @@ const { show, send, list, detalle, traer, update } = require('../controllers/mat
 
 const { showMantenimiento, sendMantenimiento, listMantenimiento, bringMantenimiento, updateMantenimiento, detalleMantenimiento } = require('../controllers/mantenimiento.controller');
 
-const { showOrderWork } = require('../controllers/ordenTabajo.controller');
+const { showOrderWork, bringOrderWork, updateOrderWork, sendOrderWork, listOrderWork, detalleOrderWork } = require('../controllers/ordenTabajo.controller');
 
 router.get('/mantenimiento/add/:id', isLoggedIn, showMantenimiento)
 router.post('/mantenimiento/add/:id', isLoggedIn, sendMantenimiento)
@@ -27,5 +27,10 @@ router.get('/matricula/edit/:id', isLoggedIn, traer)
 router.post('/matricula/edit/:id', isLoggedIn, update)
 
 router.get('/ordenTrabajo/add/:id', isLoggedIn, showOrderWork)
+router.post('/ordenTrabajo/add/:id', isLoggedIn, sendOrderWork)
+router.get('/ordenTrabajo/list/:id', isLoggedIn, listOrderWork)
+router.get('/ordenTrabajo/detailList/:id', isLoggedIn, detalleOrderWork)
+router.get('/ordenTrabajo/edit/:id', isLoggedIn, bringOrderWork)
+router.post('/ordenTrabajo/edit/:id', isLoggedIn, updateOrderWork)
 
 module.exports = router
