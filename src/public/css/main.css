@@ -21,7 +21,7 @@ textarea {
     border: 2px solid black;
     text-align: center;
     border-radius: 10px;
-    border-bottom: 6px solid #2d33f3;
+    border-bottom: 6px solid #004a29;
     transition: all .5s ease;
     width: 100%;
 }
