@@ -7,13 +7,14 @@ const sql = require('../Database/dataBase.sql')
 ordenTrabajo.showOrderWork = async (req, res) => {
     const id = req.params.id
     const list = await sql.query('select * from cars where idCars = ?', [id])
+    const maxIdVendor = await sql.query('select max(idVendor) as maximoVendor from vendors')
     const maxId = await sql.query('select max(idOrderWork) as maximo from orderWorks')
-    res.render('general/autos/ordenTrabajo/agregar', { list, maxId });
+    res.render('general/autos/ordenTrabajo/agregar', { list, maxId, maxIdVendor });
 }
 
 ordenTrabajo.sendOrderWork = async (req, res) => {
     const id = req.params.id
-    const { idCars, idOderWork, si, columnas, dateOrderWork, aproximatePrecie, applicantOrderWork, amountOrderWork, nameVendor, phoneVendor, addressVendor, typeOrderWork, detailOrderWork, unitPriceOrderWork, totalPriceOrderWork } = req.body
+    const { idCars, idOderWork, idVendor, si, columnas, dateOrderWork, aproximatePrecie, applicantOrderWork, amountOrderWork, nameVendor, phoneVendor, addressVendor, typeOrderWork, detailOrderWork, unitPriceOrderWork, totalPriceOrderWork } = req.body
     const newSendOrdenWork = {
         amountOrderWork,
         typeOrderWork,
@@ -23,7 +24,8 @@ ordenTrabajo.sendOrderWork = async (req, res) => {
         applicantOrderWork,
         dateOrderWork,
         aproximatePrecie,
-        CarIdCars: idCars
+        CarIdCars: idCars,
+        vendorIdVendor: idVendor,
     }
 
     const newVendor = {
@@ -31,6 +33,7 @@ ordenTrabajo.sendOrderWork = async (req, res) => {
         phoneVendor,
         addressVendor
     }
+    await orm.vendor.create(newVendor)
 if(parseInt(columnas)>1){
     for(let i=0; i<columnas; i++){
         await sql.query('Insert Into orderWorks value ?', [newSendOrdenWork])   
@@ -38,8 +41,6 @@ if(parseInt(columnas)>1){
 }else{
     await orm.ordenTrabajo.create(newSendOrdenWork)
 }
-    await orm.vendor.create(newVendor)
-
     if (si == 'si') {
         const imagenUsuario = req.files.imageCars;
         const validacion = path.extname(imagenUsuario.name);
