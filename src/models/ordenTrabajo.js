@@ -15,6 +15,7 @@ const orderWork = (sequelize, type) => {
         totalOrderWork: type.STRING,
         dateOrderWork: type.STRING,
         aproximatePrecie: type.STRING,
+        firmSupervisor: type.STRING,
         creatorderWork: {
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP'),

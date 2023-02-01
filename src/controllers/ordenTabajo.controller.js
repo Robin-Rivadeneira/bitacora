@@ -14,7 +14,7 @@ ordenTrabajo.showOrderWork = async (req, res) => {
 
 ordenTrabajo.sendOrderWork = async (req, res) => {
     const id = req.params.id
-    const { idCars, idOderWork, idVendor, si, columnas, dateOrderWork, aproximatePrecie, applicantOrderWork, amountOrderWork, nameVendor, phoneVendor, addressVendor, typeOrderWork, detailOrderWork, unitPriceOrderWork, totalPriceOrderWork } = req.body
+    const { idCars, idOderWork, totalOrderWork, firmSupervisor, idVendor, si, columnas, dateOrderWork, aproximatePrecie, applicantOrderWork, amountOrderWork, nameVendor, phoneVendor, addressVendor, typeOrderWork, detailOrderWork, unitPriceOrderWork, totalPriceOrderWork } = req.body
     const newSendOrdenWork = {
         amountOrderWork,
         typeOrderWork,
@@ -24,6 +24,8 @@ ordenTrabajo.sendOrderWork = async (req, res) => {
         applicantOrderWork,
         dateOrderWork,
         aproximatePrecie,
+        totalOrderWork,
+        firmSupervisor,
         CarIdCars: idCars,
         vendorIdVendor: idVendor,
     }
