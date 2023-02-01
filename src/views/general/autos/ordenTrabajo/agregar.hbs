@@ -26,6 +26,11 @@
         {{/each}}
     </div>
     <div id="provedor">
+        <div id="ventorId">
+            {{#each maxIdVendor}}
+            <input type="text" name="idVendor" id="numeros" value="{{maximoVendor}}">
+            {{/each}}
+        </div>
         <div id="Proveedor">
             <label>PROVEEDOR:</label>
             <input type="text" name="nameVendor" id="">
@@ -54,7 +59,7 @@
     </div>
     <div id="eleccionImagen">
         <label>Desea Ingresar Una Imagen:</label>
-        <p id="si">si<input type="radio" name="si" onclick="elecciones.Si()"></p>
+        <p id="si">si<input type="radio" name="si" onclick="elecciones.Si()" value="si"></p>
         <p id="no">no<input type="radio" name="no" ></p>
     </div>
     <div id="imagen">
@@ -68,6 +73,7 @@
 </form>
 
 <script src="/js/numero.js"></script>
+<script src="/js/numeroVendor.js"></script>
 <script src="/js/previsualizacion.js"></script>
 <script src="/js/tabla/ordenTrabajo.js"></script>
 <script src="/js/tabla/eleccion.js"></script>

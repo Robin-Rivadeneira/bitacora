@@ -13,7 +13,7 @@ class mantenimiento{
         codigoTabla += "</tr>"
         codigoTabla += "<tr>"
         for (let i = 0; i < parseInt(this.numeroColumna.value); i++) {
-            codigoTabla += "<td><input type='date' name='amountOrderWork' id=''></td>"
+            codigoTabla += "<td><input type='text' name='amountOrderWork' id=''></td>"
             codigoTabla += "<td><input type='text' name='typeOrderWork' id=''></td>"
             codigoTabla += "<td><input type='text' name='detailOrderWork' id=''></td>"
             codigoTabla += "<td><input type='text' name='unitPriceOrderWork' id=''></td>"
