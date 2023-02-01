@@ -35,6 +35,7 @@ index.send = async (req, res) => {
 		}
 	} else {
 		await sql.query('CREATE VIEW matriculas AS SELECT l.idlicensePlate,l.datelicensePlates,l.registrationYearLicensePlates,l.registrationExpirationDateLicensePlates,l.toNameLicensePlates, t.* FROM licensePlates l JOIN tuitiontaxes t ON t.licensePlateIdlicensePlate =l.idlicensePlate')
+		await sql.query('CREATE VIEW ordenTrabajo AS SELECT c.*, o.*, v.* from cars c JOIN orderworks o ON o.CarIdCars = c.idCars JOIN vendors v ON v.idVendor = o.vendorIdVendor')
 		res.redirect("/register");
 	}
 }

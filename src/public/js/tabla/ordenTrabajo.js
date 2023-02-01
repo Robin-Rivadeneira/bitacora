@@ -4,7 +4,9 @@ class ordenTrabajo {
         this.unidadPrecio = document.getElementsByName('unitPriceOrderWork')
         this.cantidad = document.getElementsByName('amountOrderWork')
         this.total = document.getElementsByName('totalPriceOrderWork')
-        this.totalTotal = document.getElementById('totalOrderWork')
+        this.totalTotal = document.getElementById('totalOrden')
+        this.datos = []
+        this.numero = 0
     }
     generarTablas() {
         var codigoTabla = "<table><tbody>"
@@ -30,12 +32,12 @@ class ordenTrabajo {
     }
     calculo() {
         for (let i = 0; i < parseInt(this.numeroColumna.value); i++) {
-            this.total[i].value = (parseInt(tabla.cantidad[i].value) * tabla.unidadPrecio[i].value) * 100
+            this.total[i].value = (parseInt(tabla.cantidad[i].value) * tabla.unidadPrecio[i].value).toFixed(2)
+            this.datos.push(this.total[i].value)
         }
         for (let m = 0; m < parseInt(this.numeroColumna.value); m++) {
-            for (let j = 1; j < parseInt(this.numeroColumna.value); j++) {
-                this.totalTotal.value = parseFloat(this.total[m].value) + parseFloat(this.total[j].value)
-            }
+                this.numero = this.numero + parseFloat(this.datos[m])
+                this.totalTotal.value = this.numero
         }
     }
 }
