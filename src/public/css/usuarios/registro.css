@@ -1,32 +1,41 @@
 #contenedor {
-    max-width: 90%;
-    max-height: 80%;
+    max-width: 50%;
+    max-height: 100%;
     position: absolute;
-    top: 14.5%;
-    left: 5%;
+    top: 0%;
+    left: 0%;
     text-align: center;
-    border: 2px double;
+}
+
+/* IMAGEN */
+#imagen {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    border-radius: 10px;
 }
 
 #titulo {
     position: absolute;
     width: 50%;
     left: 25%;
-    top: 2%;
+    top: 5%;
 }
 
-#titulo p{
+#titulo p {
     font-size: 30px;
 }
 
 /*Aquí comienza formulario*/
 #formulario {
     background-color: rgb(248, 243, 235);
-    width: 95%;
+    width: 90%;
     height: 90%;
     position: absolute;
     top: 5%;
-    right: 2.5%;
+    left: 5%;
     border-radius: 10px;
     border: 2px double;
 }
@@ -39,37 +48,41 @@
 #Contraseña {
     width: 100%;
     height: 100%;
-    max-width: 45%;
-    max-height: 12%;
+    max-width: 90%;
+    max-height: 10%;
     position: absolute;
-    left: 2.5%;
-    top: 20%;
+    left: 5%;
+    top: 14%;
 }
 
-#correoUsuario,
+#nombreUsuario {
+    top: 25.5%;
+}
+
+#correoUsuario {
+    top: 37%;
+}
+
 #celularUsuario {
-    top: 35%;
+    top: 48.5%;
 }
 
-#Nick,
+#Nick {
+    top: 60%;
+}
+
 #Contraseña {
-    top: 50%;
+    top: 71.5%;
 }
 
 #ojo {
     position: absolute;
-    top: 52%;
-    left: 93.5%;
+    top: 73%;
+    left: 89%;
     width: 100%;
     height: 100%;
-    max-width: 4%;
-    max-height: 8%;
-}
-
-#identificacion,
-#celularUsuario,
-#Contraseña {
-    left: 52.5%;
+    max-width: 6%;
+    max-height: 7%;
 }
 
 #nombreUsuario label,
@@ -81,7 +94,7 @@
     color: black;
     width: 100%;
     height: 100%;
-    max-width: 32.5%;
+    max-width: 27.5%;
     max-height: 100%;
     position: absolute;
     top: 0%;
@@ -100,7 +113,7 @@
 #Contraseña input {
     width: 100%;
     height: 100%;
-    max-width: 65%;
+    max-width: 67.5%;
     max-height: 70%;
     position: absolute;
     top: 15%;
@@ -109,54 +122,16 @@
 
 #boton {
     position: absolute;
-    top: 75%;
-    left: 44%;
-    width: 20%;
-    height: 10%;
+    bottom: 5%;
+    left: 40%;
+    width: 30%;
+    height: 7.5%;
 }
 
 #boton button {
-    text-align: right;
-    border-right: 40px solid transparent;
-    background-color: #0097e7;
+    text-align: center;
     width: 100%;
     height: 100%;
     max-width: 100%;
     max-height: 100%;
-}
-
-#iconoGuardar {
-    background-color: #1232bd;
-    border-radius: 10%;
-    width: 100%;
-    height: 100%;
-    max-width: 25%;
-    max-height: 100%;
-    position: absolute;
-    left: 0%;
-    top: 0%;
-}
-
-#iconoGuardar img {
-    max-width: 60%;
-    max-height: 60%;
-    position: absolute;
-    top: 20%;
-    left: 20%;
-}
-#botonRegister{
-    display: none;
-}
-#botonLogin{
-    left: 87%;
-}
-#busqueda input{
-  position: absolute;
-  left: 120% !important;
-}
-#busqueda button{
-  left: 210% !important;
-}
-#contenedorFooter{
-    top: 100%;
 }
