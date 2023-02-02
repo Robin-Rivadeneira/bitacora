@@ -1,37 +1,36 @@
 <!-- Required meta tags -->
 <link rel="stylesheet" href="/css/usuarios/login.css" type="text/css">
 
-<div id="contenedor">
-    <!-- Aquí comienza el primer formulario -->
-    <div id="formulario">
-        <h1>Iniciar Sesión</h1>
-        <form action="/Login" method="post" id="ocultar">
-            <div id="Email">
-                <input id="nombreIntxt" type="userName" name="username" placeholder="Usuario" required>
-            </div>
+<form action="/Login" method="post" id="ocultar">
+    <div id="contenedor">
+        <div id="titulo">
+            <h1>Iniciar Sesión</h1>
+        </div>
 
-            <div id="Password">
-                <input id="passIntxt" type="password" name="password" placeholder="Contraseña" required>
-            </div>
+        <div id="Email">
+            <input id="nombreIntxt" type="userName" name="username" placeholder="Usuario" required>
+        </div>
 
-            <div id="ojo">
-                <button id="visto" type="button" onclick="boton.cambio()"><img src="/img/icons/white/eyes.png"></button>
-                <button id="equis" type="button" onclick="boton.cambio2()"><img
-                        src="/img/icons/white/cerrado.png"></button>
-            </div>
+        <div id="Password">
+            <input id="passIntxt" type="password" name="password" placeholder="Contraseña" required>
+        </div>
 
-            <div id="botonIniciarSesion">
-                <button type="sumbit">
-                    <div id="iconoLogin">
-                        <img src="/img/icons/white/login.png">
-                    </div>Iniciar Sesión
-                </button>
-            </div>
+        <div id="ojo">
+            <button id="visto" type="button" onclick="boton.cambio()">
+                <img src="/img/icons/white/eyes.png">
+            </button>
+            <button id="equis" type="button" onclick="boton.cambio2()">
+                <img src="/img/icons/white/cerrado.png">
+            </button>
+        </div>
 
-        </form>
+        <div id="botonIniciarSesion">
+            <button type="sumbit">
+                Iniciar Sesión
+            </button>
+        </div>
     </div>
-    <!-- Aquí termina el primer formulario -->
-</div>
+</form>
 
 <div id="logo">
     <img src="/img/logos/RACING ISOTIPO VERTICAL.jpg" alt="Logo">
