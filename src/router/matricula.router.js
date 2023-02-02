@@ -12,8 +12,15 @@ const { showMantenimiento, sendMantenimiento, listMantenimiento, bringMantenimie
 const { showOrderWork, bringOrderWork, updateOrderWork, sendOrderWork, listOrderWork, detalleOrderWork } = require('../controllers/ordenTabajo.controller');
 
 const { showKilometrage } = require('../controllers/kilometraje.controller');
+const { showImplemeto, listImplemeto, detalleImplemeto, bringImplemeto } = require('../controllers/implementos.controller');
 
 router.get('/kilometraje/add/:id', isLoggedIn, showKilometrage)
+
+router.get('/implementos/add/:id', isLoggedIn, showImplemeto)
+router.get('/implementos/list/:id', isLoggedIn, listImplemeto)
+router.get('/implementos/detail/:id', isLoggedIn, detalleImplemeto)
+router.get('/implementos/edit/:id', isLoggedIn, bringImplemeto)
+
 
 router.get('/mantenimiento/add/:id', isLoggedIn, showMantenimiento)
 router.post('/mantenimiento/add/:id', isLoggedIn, sendMantenimiento)
