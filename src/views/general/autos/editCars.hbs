@@ -4,12 +4,23 @@
 <form action="/cars/edit/{{idCars}}" method="post" enctype="multipart/form-data">
     <div id="contenedor">
         <!-- Aquí comienza la seccion de imagen -->
+        <div id="eleccion">
+            <p>Desea Actualizar la Imagen</p>
+            <div id="SI">
+                <label>SI</label>
+                <input type="radio" name="si" id="si" value="si" onclick="elecciones.SI()">
+            </div>
+            <div id="NO">
+                <label>NO</label>
+                <input type="radio" name="no" id="no" value="no" onclick="elecciones.NO()">
+            </div>
+            <input type="file" name="imageCars" id="seleccionArchivos" accept="image/*"/>
+        </div>
         <div id="imagen">
             <label>Foto del Vehìculo</label>
             <div id="cambioImagen">
-                <img src="/img/cars/{{imageCars}}" id="imagenPrevisualizacion" />
+                <img src="/img/cars/{{imageCars}}" id="imagenPrevisualizacion">
             </div>
-            <input type="file" name="imageCars" id="seleccionArchivos" accept="image/*"/>
         </div>
         <!-- Aquí termina la sección de imagen -->
 
@@ -20,8 +31,8 @@
                 <input type="text" name="idCarro" value="{{idCars}}" id="numero" readonly>
             </div>
 
-          <div id="Matricula">
-                <label>Matricula:</label>
+           <div id="Matricula">
+                <label>Placa:</label>
                 <input type="text" name="licenseplateCars" required value="{{licenseplateCars}}">
             </div>
 
@@ -35,14 +46,30 @@
                 <input type="text" name="modelCars" id="" required value="{{modelCars}}">
             </div>
 
-            <div id="Tipo">
-                <label>Tipo:</label>
-                <input type="text" name="typeCars" id="" required value="{{typeCars}}">
+            <div id="FechaMatricula">
+                <label>Fecha de Matricula:</label>
+                <input type="date" name="yearsLicenseplateCars" id="" required value="{{yearsLicenseplateCars}}">
+            </div>
+
+            <div id="FechaCasudidad">
+                <label>Fecha Caducidad Matricula:</label>
+                <input type="date" name="YearsExpirationLicensePlateCars" id="" required value="{{YearsExpirationLicensePlateCars}}">
             </div>
 
             <div id="Clase">
                 <label>Clase:</label>
-                <input type="text" name="classCars" id="" required value="{{classCars}}">
+                <select name="classCars" id="">
+                    <option value="{{classCars}}"><p>{{classCars}}</p></option>
+                    <option value="A"><p>A</p></option>
+                    <option value="B"><p>B</p></option>
+                    <option value="C"><p>C</p></option>
+                    <option value="D"><p>D</p></option>
+                    <option value="E"><p>E</p></option>
+                    <option value="F"><p>F</p></option>
+                    <option value="SUV"><p>SUV</p></option>
+                    <option value="M"><p>M</p></option>
+                    <option value="S"><p>S</p></option>
+                </select>
             </div>
 
 
@@ -78,4 +105,4 @@
 </form>
 
 <script src="/js/previsualizacion.js"></script>
-<script src="/js/events/evento.js"></script>
+<script src="/js/elecion.js"></script>
