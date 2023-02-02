@@ -3,9 +3,19 @@ class tablas {
         this.numeroColumna = document.getElementById('columnas')
     }
     generarTablas() {
-        var codijoTabla = "<table><tbody>"
+        var codijoTabla = "<div id='HOJACONTROL'><p>HOJA CONTROL DE COMBUSTIBLE </p></div>"
+        codijoTabla += "<div id='numero'><p>N°</p></div>"
+        codijoTabla += "<div id='Fecha'><p>Fecha</p></div>"
+        codijoTabla += "<div id='KILOMETRAJE'><p>KILOMETRAJE</p></div>"
+        codijoTabla += "<div id='TOTAL'><p>TOTAL</p></div>"
+        codijoTabla += "<div id='COMBUSTIBLEINICIAL'><p>COMBUSTIBLE INICIAL</p></div>"
+        codijoTabla += "<div id='TANQUEADAS'><p>TANQUEADAS</p></div>"
+        codijoTabla += "<div id='NUEVOCOMBUSTIBLE'><p>NUEVO COMBUSTIBLE</p></div>"
+        codijoTabla += "<div id='COMBUSTIBLEFINAL'><p>COMBUSTIBLE FINAL</p></div>"
+        codijoTabla += "<div id='CONSUMO'><p>CONSUMO</p></div>"
+        codijoTabla += "<table><tbody>"
         codijoTabla += "<tr>"
-        codijoTabla += "<td>N°</td>"
+        codijoTabla += "<td></td>"
         codijoTabla += "<td>Fecha</td>"
         codijoTabla += "<td>INICIAL</td>"
         codijoTabla += "<td>FINAL</td>"
@@ -74,11 +84,11 @@ class tablas {
             codijoTabla += "<td><input type='text' name='finishGas' id=''></td>"
             codijoTabla += "<td><input type='text' name='tankedGas' id=''></td>"
             codijoTabla += "<td><input type='text' name='totalTankeMondGas' id=''></td>"
+            codijoTabla += "</tr>"
         }
-        codijoTabla += "</tr>"
         codijoTabla += "</tbody></table>"
         codijoTabla += " <div id='boton'><button type='submit'>Guardar</button></div>"
-        document.getElementById('formulario').innerHTML = codijoTabla
+        document.getElementById('hojaConsumo').innerHTML = codijoTabla
     }
 }
 

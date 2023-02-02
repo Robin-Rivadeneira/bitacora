@@ -11,6 +11,7 @@ const Cars = (sequelize, type) => {
         modelCars: type.STRING,
         colourCars:type.STRING,
         chassisCars: type.STRING,
+        YearsExpirationLicensePlateCars: type.STRING,
         yearsLicenseplateCars: type.STRING,
         classCars: type.STRING,
         engineCars: type.STRING,

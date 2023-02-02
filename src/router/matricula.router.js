@@ -11,6 +11,10 @@ const { showMantenimiento, sendMantenimiento, listMantenimiento, bringMantenimie
 
 const { showOrderWork, bringOrderWork, updateOrderWork, sendOrderWork, listOrderWork, detalleOrderWork } = require('../controllers/ordenTabajo.controller');
 
+const { showKilometrage } = require('../controllers/kilometraje.controller');
+
+router.get('/kilometraje/add/:id', isLoggedIn, showKilometrage)
+
 router.get('/mantenimiento/add/:id', isLoggedIn, showMantenimiento)
 router.post('/mantenimiento/add/:id', isLoggedIn, sendMantenimiento)
 router.get('/mantenimiento/list/:id', isLoggedIn, listMantenimiento)

@@ -19,11 +19,12 @@ generalList.showCarsAdd = async (req, res) => {
 }
 generalList.sendCarsadd = async (req, res) => {
     const id = req.user.idUsers
-    const { idCarro, licenseplateCars, brandCars, modelCars, yearsLicenseplateCars, classCars, colourCars, chassisCars, engineCars, yearsCars } = req.body
+    const { idCarro, licenseplateCars, brandCars, YearsExpirationLicensePlateCars, modelCars, yearsLicenseplateCars, classCars, colourCars, chassisCars, engineCars, yearsCars } = req.body
     const newSend = {
         licenseplateCars,
         brandCars,
         modelCars, 
+        YearsExpirationLicensePlateCars,
         yearsLicenseplateCars,
         classCars,
         colourCars,
@@ -69,11 +70,12 @@ generalList.bringCars = async (req, res) => {
 
 generalList.updateCars = async (req, res) => {
     const id = req.user.idUsers
-    const { idCarro, licenseplateCars, brandCars, modelCars, yearsLicenseplateCars, classCars, colourCars, chassisCars, engineCars, yearsCars } = req.body
+    const { idCarro, licenseplateCars, brandCars, YearsExpirationLicensePlateCars, modelCars, yearsLicenseplateCars, classCars, colourCars, chassisCars, engineCars, yearsCars } = req.body
     const newSend = {
         licenseplateCars,
         brandCars,
         modelCars, 
+        YearsExpirationLicensePlateCars,
         yearsLicenseplateCars,
         classCars,
         colourCars,

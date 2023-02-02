@@ -26,7 +26,8 @@
 
 #Marca,
 #Modelo,
-#Tipo,
+#FechaMatricula,
+#FechaCasudidad,
 #Clase,
 #Color,
 #Chasis,
@@ -40,7 +41,7 @@
 
 #Marca,
 #Color,
-#Tipo,
+#FechaMatricula,
 #Motor,
 #Año{
     left: 5%;
@@ -49,7 +50,8 @@
 #Modelo,
 #Clase,
 #Chasis,
-#Matricula{
+#Matricula,
+#FechaCasudidad{
     left: 55%;
 }
 
@@ -58,7 +60,7 @@
     top: 15%;
 }
 
-#Tipo,
+#FechaMatricula,
 #Clase{
     top: 30%;
 }
@@ -73,7 +75,8 @@
     top: 60%;
 }
 
-#Motor{
+#Motor,
+#FechaCasudidad{
     top: 75%;
 }
 
