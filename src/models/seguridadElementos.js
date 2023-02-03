@@ -5,6 +5,7 @@ const SecurityElemenstAndServis = (sequelize, type) => {
             primaryKey: true,
             autoIncrement: true
         },
+        dateSecurityElemenstAndServis: type.STRING,
         nameSecurityElemenstAndServis: type.STRING,
         typeSecurityElemenstAndServis: type.STRING,
         stateSecurityElemenstAndServis: type.STRING,

@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="style.css">
-<form action="/cars/implementos/add/" method="post">
+<form action="/cars/implementos/add/{{user.idUsers}}" method="post">
     <div id="DatosCarro">
         {{#each list}}
         <div id="vehiculo">
@@ -15,6 +15,10 @@
             <label>Modelo: <p>{{brandCars}}</p></label>
         </div>
         {{/each}}
+    </div>
+    <div id="fecha">
+        <label>Fecha:</label>
+        <input type="text" name="dateSecurityElemenstAndServis" id="" required>
     </div>
     <div id="titulo">
         <select name="typeSecurityElemenstAndServis" id="nombre" onclick="implement.metodo()">

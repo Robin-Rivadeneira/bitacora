@@ -2,16 +2,13 @@
 <form action="/cars/implementos/list/{{user.idUsers}}" method="get"></form>
 <div id="contenedor">
     <div class="row">
-        {{#each list}}
+        {{#each implementos}}
         <div id="tarjetas">
-            <div id="imagen">
-                <img src="/img/cars/{{imageCars}}" alt="">
+            <div id="nombre">
+                <p>{{nameSecurityElemenstAndServis}}</p>
             </div>
-            <div id="matricula">
-                <p>{{licenseplateCars}}</p>
-            </div>
-            <div id="modelo">
-                <p>{{modelCars}}</p>
+            <div id="fecha">
+                <p>{{dateSecurityElemenstAndServis}}</p>
             </div>
             <div id="editar">
                 <a href="/implementos/edit/{{idCars}}"><button type="button">Actualizar</button></a>
