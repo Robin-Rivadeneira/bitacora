@@ -1,237 +1,210 @@
 <link rel="stylesheet" href="style.css">
 <form action="/cars/implementos/add/" method="post">
-    <div id="datosCarro">
-        <div id="titulo">
-            <p>Datos del Vehiculo</p>
+    <div id="DatosCarro">
+        {{#each list}}
+        <div id="vehiculo">
+            <label>VEHÍCULO N°:<input type="text" name="idCars" id="" value="{{idCars}}"></label>
         </div>
-        <div id="marca">
-            <label>Marca:</label>
-            <p></p>
+        <div id="Placa">
+            <label>PLACA: <p>{{licenseplateCars}}</p></label>
         </div>
-        <div id="clase">
-            <label>Clase:</label>
-            <p></p>
+        <div id="Marca">
+            <label>Marca: <p>{{modelCars}}</p></label>
         </div>
-        <div id="tipo">
-            <label>Tipo:</label>
-            <p></p>
+        <div id="Modelo">
+            <label>Modelo: <p>{{brandCars}}</p></label>
         </div>
-        <div id="año">
-            <label>Año:</label>
-            <p></p>
-        </div>
-        <div id="placa">
-            <label>Placa:</label>
-            <p></p>
-        </div>
-        <div id="modelo">
-            <label>Modelo:</label>
-            <p></p>
-        </div>
-        <div id="motor">
-            <label>Motor:</label>
-            <p></p>
-        </div>
-        <div id="chasis">
-            <label>Chasis:</label>
-            <p></p>
-        </div>
+        {{/each}}
+    </div>
+    <div id="titulo">
+        <select name="typeSecurityElemenstAndServis" id="nombre" onclick="implement.metodo()">
+            <option value="CODIGOS DE ESPECIFICACIÓN">CODIGOS DE ESPECIFICACIÓN</option>
+            <option value="NIVELES">NIVELES</option>
+            <option value="ELEMENTOS DE SEGURIDAD  Y SERVICIOS">ELEMENTOS DE SEGURIDAD Y SERVICIOS</option>
+            <option value="HERRAMIENTAS">HERRAMIENTAS</option>
+            <option value="LUCES">LUCES</option>
+        </select>
     </div>
     <div id="implementos">
-        <div id="titulo">
-            <input type="text" name="typeSecurityElemenstAndServis" id="nombre" value="CODIGOS DE ESPECIFICACIÓN">
-        </div>
         <div id="eleciones">
             <label id="primero">si</label>
             <label id="segundo">no</label>
         </div>
         <div id="PINTURA">
-            <input type="text"  name="nameSecurityElemenstAndServis " id="" value="PINTURA">
+            <input type="text" name="nameSecurityElemenstAndServis " id="" value="PINTURA">
             <input type="radio" name="stateSecurityElemenstAndServis" id="si" value="si">
             <input type="radio" name="stateSecurityElemenstAndServis" id="no" value="no">
         </div>
         <div id="ALTERNADOR ">
-            <input type="text"  name="nameSecurityElemenstAndServis " id="" value="ALTERNADOR">
+            <input type="text" name="nameSecurityElemenstAndServis " id="" value="ALTERNADOR">
             <input type="radio" name="stateSecurityElemenstAndServis" id="si1" value="si">
             <input type="radio" name="stateSecurityElemenstAndServis" id="no1" value="no">
         </div>
         <div id="CORREA(s)">
-            <input type="text"  name="nameSecurityElemenstAndServis " id="" value="CORREA(s)">
+            <input type="text" name="nameSecurityElemenstAndServis " id="" value="CORREA(s)">
             <input type="radio" name="stateSecurityElemenstAndServis" id="si2" value="si">
             <input type="radio" name="stateSecurityElemenstAndServis" id="no2" value="no">
         </div>
         <div id="NEUMATICOS">
-            <input type="text"  name="nameSecurityElemenstAndServis " id="" value="NEUMATICOS">
+            <input type="text" name="nameSecurityElemenstAndServis " id="" value="NEUMATICOS">
             <input type="radio" name="stateSecurityElemenstAndServis" id="si3" value="si">
             <input type="radio" name="stateSecurityElemenstAndServis" id="no3" value="no">
         </div>
         <div id="BATERIA ">
-            <input type="text"  name="nameSecurityElemenstAndServis " id="" value="BATERIA">
+            <input type="text" name="nameSecurityElemenstAndServis " id="" value="BATERIA">
             <input type="radio" name="stateSecurityElemenstAndServis" id="si4" value="si">
             <input type="radio" name="stateSecurityElemenstAndServis" id="no4" value="no">
         </div>
     </div>
     <div id="implementos2">
-        <div id="titulo">
-            <input type="text" name="typeSecurityElemenstAndServis" id="nombre" value="NIVELES">
-        </div>
         <div id="eleciones">
             <label id="primero">si</label>
             <label id="segundo">no</label>
         </div>
         <div id="COMBUSTIBLE">
-            <input type="text"  name="nameSecurityElemenstAndServis " id="" value="COMBUSTIBLE">
+            <input type="text" name="nameSecurityElemenstAndServis " id="" value="COMBUSTIBLE">
             <input type="radio" name="stateSecurityElemenstAndServis" id="si5" value="si">
             <input type="radio" name="stateSecurityElemenstAndServis" id="no5" value="no">
         </div>
         <div id="ACEITEDEMOTOR">
-            <input type="text"  name="nameSecurityElemenstAndServis " id="" value="ACEITE DE MOTOR">
+            <input type="text" name="nameSecurityElemenstAndServis " id="" value="ACEITE DE MOTOR">
             <input type="radio" name="stateSecurityElemenstAndServis" id="si6" value="si">
             <input type="radio" name="stateSecurityElemenstAndServis" id="no6" value="no">
         </div>
         <div id="REFRIGERANTE(AGUA)">
-            <input type="text"  name="nameSecurityElemenstAndServis " id="" value="REFRIGERANTE (AGUA)">
+            <input type="text" name="nameSecurityElemenstAndServis " id="" value="REFRIGERANTE (AGUA)">
             <input type="radio" name="stateSecurityElemenstAndServis" id="si7" value="si">
             <input type="radio" name="stateSecurityElemenstAndServis" id="no7" value="no">
         </div>
         <div id="LIQ.FRENOS">
-            <input type="text"  name="nameSecurityElemenstAndServis " id="" value="LIQ. FRENOS">
+            <input type="text" name="nameSecurityElemenstAndServis " id="" value="LIQ. FRENOS">
             <input type="radio" name="stateSecurityElemenstAndServis" id="si8" value="si">
             <input type="radio" name="stateSecurityElemenstAndServis" id="no8" value="no">
         </div>
         <div id="WIPPER">
-            <input type="text"  name="nameSecurityElemenstAndServis " id="" value="WIPPER">
+            <input type="text" name="nameSecurityElemenstAndServis " id="" value="WIPPER">
             <input type="radio" name="stateSecurityElemenstAndServis" id="si9" value="si">
             <input type="radio" name="stateSecurityElemenstAndServis" id="no9" value="no">
         </div>
         <div id="ACEITETRANS">
-            <input type="text"  name="nameSecurityElemenstAndServis " id="" value="ACEITE TRANS">
+            <input type="text" name="nameSecurityElemenstAndServis " id="" value="ACEITE TRANS">
             <input type="radio" name="stateSecurityElemenstAndServis" id="si10" value="si">
             <input type="radio" name="stateSecurityElemenstAndServis" id="no10" value="no">
         </div>
     </div>
     <div id="implementos3">
-        <div id="titulo">
-            <input type="text" name="typeSecurityElemenstAndServis" id="nombre" value="ELEMENTOS DE SEGURIDAD  Y SERVICIOS">
-        </div>
         <div id="eleciones">
             <label id="primero">si</label>
             <label id="segundo">no</label>
         </div>
         <div id="RADIO">
-            <input type="text"  name="nameSecurityElemenstAndServis " id="" value="RADIO">
+            <input type="text" name="nameSecurityElemenstAndServis " id="" value="RADIO">
             <input type="radio" name="stateSecurityElemenstAndServis" id="si11" value="si">
             <input type="radio" name="stateSecurityElemenstAndServis" id="no11" value="no">
         </div>
         <div id="ANTENA">
-            <input type="text"  name="nameSecurityElemenstAndServis " id="" value="ANTENA">
+            <input type="text" name="nameSecurityElemenstAndServis " id="" value="ANTENA">
             <input type="radio" name="stateSecurityElemenstAndServis" id="si12" value="si">
             <input type="radio" name="stateSecurityElemenstAndServis" id="no12" value="no">
         </div>
         <div id="EXTINTOR">
-            <input type="text"  name="nameSecurityElemenstAndServis " id="" value="EXTINTOR">
+            <input type="text" name="nameSecurityElemenstAndServis " id="" value="EXTINTOR">
             <input type="radio" name="stateSecurityElemenstAndServis" id="si13" value="si">
             <input type="radio" name="stateSecurityElemenstAndServis" id="no13" value="no">
         </div>
         <div id="TRIANGULOS">
-            <input type="text"  name="nameSecurityElemenstAndServis " id="" value="TRIANGULOS">
+            <input type="text" name="nameSecurityElemenstAndServis " id="" value="TRIANGULOS">
             <input type="radio" name="stateSecurityElemenstAndServis" id="si14" value="si">
             <input type="radio" name="stateSecurityElemenstAndServis" id="no14" value="no">
         </div>
         <div id="BOTIQUIN">
-            <input type="text"  name="nameSecurityElemenstAndServis " id="" value="BOTIQUIN">
+            <input type="text" name="nameSecurityElemenstAndServis " id="" value="BOTIQUIN">
             <input type="radio" name="stateSecurityElemenstAndServis" id="si15" value="si">
             <input type="radio" name="stateSecurityElemenstAndServis" id="no15" value="no">
         </div>
         <div id="GATA">
-            <input type="text"  name="nameSecurityElemenstAndServis " id="" value="GATA">
+            <input type="text" name="nameSecurityElemenstAndServis " id="" value="GATA">
             <input type="radio" name="stateSecurityElemenstAndServis" id="si16" value="si">
             <input type="radio" name="stateSecurityElemenstAndServis" id="no16" value="no">
         </div>
         <div id="CONOS">
-            <input type="text"  name="nameSecurityElemenstAndServis " id="" value="CONOS">
+            <input type="text" name="nameSecurityElemenstAndServis " id="" value="CONOS">
             <input type="radio" name="stateSecurityElemenstAndServis" id="si17" value="si">
             <input type="radio" name="stateSecurityElemenstAndServis" id="no17" value="no">
         </div>
         <div id="RETROVISORES">
-            <input type="text"  name="nameSecurityElemenstAndServis " id="" value="RETROVISORES">
+            <input type="text" name="nameSecurityElemenstAndServis " id="" value="RETROVISORES">
             <input type="radio" name="stateSecurityElemenstAndServis" id="si18" value="si">
             <input type="radio" name="stateSecurityElemenstAndServis" id="no18" value="no">
         </div>
         <div id="PRÓXIMOMANTENIMIENTO">
-            <input type="text"  name="nameSecurityElemenstAndServis " id="" value="PRÓXIMO MANTENIMIENTO">
+            <input type="text" name="nameSecurityElemenstAndServis " id="" value="PRÓXIMO MANTENIMIENTO">
             <input type="text" name="stateSecurityElemenstAndServis" id="" value="">
         </div>
     </div>
     <div id="implementos4">
-        <div id="titulo">
-            <input type="text" name="typeSecurityElemenstAndServis" id="nombre" value="HERRAMIENTAS">
-        </div>
         <div id="eleciones">
             <label id="primero">si</label>
             <label id="segundo">no</label>
         </div>
         <div id="PISOS">
-            <input type="text"  name="nameSecurityElemenstAndServis " id="" value="PISOS">
+            <input type="text" name="nameSecurityElemenstAndServis " id="" value="PISOS">
             <input type="radio" name="stateSecurityElemenstAndServis" id="si19" value="si">
             <input type="radio" name="stateSecurityElemenstAndServis" id="no19" value="no">
         </div>
         <div id="PLUMILLASDEL.">
-            <input type="text"  name="nameSecurityElemenstAndServis " id="" value="PLUMILLAS DEL.">
+            <input type="text" name="nameSecurityElemenstAndServis " id="" value="PLUMILLAS DEL.">
             <input type="radio" name="stateSecurityElemenstAndServis" id="si20" value="si">
             <input type="radio" name="stateSecurityElemenstAndServis" id="no20" value="no">
         </div>
         <div id="PLUMILLASTRAS">
-            <input type="text"  name="nameSecurityElemenstAndServis " id="" value="PLUMILLAS TRAS">
+            <input type="text" name="nameSecurityElemenstAndServis " id="" value="PLUMILLAS TRAS">
             <input type="radio" name="stateSecurityElemenstAndServis" id="si21" value="si">
             <input type="radio" name="stateSecurityElemenstAndServis" id="no21" value="no">
         </div>
         <div id="CINTURONES">
-            <input type="text"  name="nameSecurityElemenstAndServis " id="" value="CINTURONES">
+            <input type="text" name="nameSecurityElemenstAndServis " id="" value="CINTURONES">
             <input type="radio" name="stateSecurityElemenstAndServis" id="si22" value="si">
             <input type="radio" name="stateSecurityElemenstAndServis" id="no22" value="no">
         </div>
         <div id="TAPIZINTERIOR">
-            <input type="text"  name="nameSecurityElemenstAndServis " id="" value="TAPIZ INTERIOR">
+            <input type="text" name="nameSecurityElemenstAndServis " id="" value="TAPIZ INTERIOR">
             <input type="radio" name="stateSecurityElemenstAndServis" id="si23" value="si">
             <input type="radio" name="stateSecurityElemenstAndServis" id="no23" value="no">
         </div>
     </div>
     <div id="implementos5">
-        <div id="titulo">
-            <input type="text" name="typeSecurityElemenstAndServis" id="nombre" value="LUCES">
-        </div>
         <div id="eleciones">
             <label id="primero">si</label>
             <label id="segundo">no</label>
         </div>
         <div id="ALTADELDER">
-            <input type="text"  name="nameSecurityElemenstAndServis " id="" value="ALTA DEL DER">
+            <input type="text" name="nameSecurityElemenstAndServis " id="" value="ALTA DEL DER">
             <input type="radio" name="stateSecurityElemenstAndServis" id="si24" value="si">
             <input type="radio" name="stateSecurityElemenstAndServis" id="no24" value="no">
         </div>
         <div id="ALTADELIZQ">
-            <input type="text"  name="nameSecurityElemenstAndServis " id="" value="ALTA DEL IZQ">
+            <input type="text" name="nameSecurityElemenstAndServis " id="" value="ALTA DEL IZQ">
             <input type="radio" name="stateSecurityElemenstAndServis" id="si25" value="si">
             <input type="radio" name="stateSecurityElemenstAndServis" id="no25" value="no">
         </div>
         <div id="BAJADELDER">
-            <input type="text"  name="nameSecurityElemenstAndServis " id="" value="BAJA DEL DER">
+            <input type="text" name="nameSecurityElemenstAndServis " id="" value="BAJA DEL DER">
             <input type="radio" name="stateSecurityElemenstAndServis" id="si26" value="si">
             <input type="radio" name="stateSecurityElemenstAndServis" id="no26" value="no">
         </div>
         <div id="BAJADELIZQ">
-            <input type="text"  name="nameSecurityElemenstAndServis " id="" value="BAJA DEL IZQ">
+            <input type="text" name="nameSecurityElemenstAndServis " id="" value="BAJA DEL IZQ">
             <input type="radio" name="stateSecurityElemenstAndServis" id="si27" value="si">
             <input type="radio" name="stateSecurityElemenstAndServis" id="no27" value="no">
         </div>
         <div id="PARKING">
-            <input type="text"  name="nameSecurityElemenstAndServis " id="" value="PARKING">
+            <input type="text" name="nameSecurityElemenstAndServis " id="" value="PARKING">
             <input type="radio" name="stateSecurityElemenstAndServis" id="si28" value="si">
             <input type="radio" name="stateSecurityElemenstAndServis" id="no28" value="no">
         </div>
         <div id="RETRO">
-            <input type="text"  name="nameSecurityElemenstAndServis " id="" value="RETRO">
+            <input type="text" name="nameSecurityElemenstAndServis " id="" value="RETRO">
             <input type="radio" name="stateSecurityElemenstAndServis" id="si29" value="si">
             <input type="radio" name="stateSecurityElemenstAndServis" id="no29" value="no">
         </div>
@@ -245,3 +218,5 @@
         <button type="submit">Guardar</button>
     </div>
 </form>
+
+<script src="/js/implementos/implementos.js"></script>

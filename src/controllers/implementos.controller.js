@@ -8,6 +8,22 @@ implemento.showImplemeto = async(req, res) =>{
     res.render('general/autos/implementos/agregar', { list })
 }
 
+implemento.sendImplemeto = async(req, res)=>{
+    const id = req.user.idUsers
+    const {idCars, typeSecurityElemenstAndServis, nameSecurityElemenstAndServis, stateSecurityElemenstAndServis, observationSecurityElemenstAndServis} = req.body
+    const newImplemento = {
+        nameSecurityElemenstAndServis,
+        typeSecurityElemenstAndServis,
+        stateSecurityElemenstAndServis,
+        observationSecurityElemenstAndServis,
+        userIdUsers: id,
+        CarIdCars: idCars
+    }
+    await orm.seguridadElementos.create(newImplemento)
+    req.flash('success', 'Guardado')
+    res.redirect('/cars/implementos/list/' + id);
+}
+
 implemento.listImplemeto = async(req, res) =>{
     const list = await sql.query('select * from Cars')
     const implementos = await sql.query('select * from securityelemenstandservis')
