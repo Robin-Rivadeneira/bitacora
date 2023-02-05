@@ -420,6 +420,21 @@ class siNo {
             this.si19.setAttribute('disabled', '')
         }
     }
+
+    decimoVenteVentiunoSi() {
+        if (this.si20.value == 'si') {
+            this.si20.style.display = 'none'
+            this.inp20.innerHTML = '<input type="text" name="stateSecurityElemenstAndServis" id="si20" value="si" readonly>'
+            this.no20.setAttribute('disabled', '')
+        }
+    }
+   decimoVenteVentiunoNO(){
+        if (this.no20.value == 'no') {
+            this.no20.style.display = 'none'
+            this.inp20.innerHTML = '<input type="text" name="stateSecurityElemenstAndServis" id="no20" value="no" readonly>'
+            this.si20.setAttribute('disabled', '')
+        }
+    }
 }
 
 let siOno = new siNo()
