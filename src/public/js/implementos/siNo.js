@@ -435,6 +435,156 @@ class siNo {
             this.si20.setAttribute('disabled', '')
         }
     }
+
+    decimoVenteDosSi() {
+        if (this.si21.value == 'si') {
+            this.si21.style.display = 'none'
+            this.inp21.innerHTML = '<input type="text" name="stateSecurityElemenstAndServis" id="si21" value="si" readonly>'
+            this.no21.setAttribute('disabled', '')
+        }
+    }
+   decimoVenteDosNO(){
+        if (this.no21.value == 'no') {
+            this.no21.style.display = 'none'
+            this.inp21.innerHTML = '<input type="text" name="stateSecurityElemenstAndServis" id="no21" value="no" readonly>'
+            this.si21.setAttribute('disabled', '')
+        }
+    }
+
+    decimoVenteTresSi() {
+        if (this.si22.value == 'si') {
+            this.si22.style.display = 'none'
+            this.inp22.innerHTML = '<input type="text" name="stateSecurityElemenstAndServis" id="si22" value="si" readonly>'
+            this.no22.setAttribute('disabled', '')
+        }
+    }
+   decimoVenteTresNO(){
+        if (this.no22.value == 'no') {
+            this.no22.style.display = 'none'
+            this.inp22.innerHTML = '<input type="text" name="stateSecurityElemenstAndServis" id="no22" value="no" readonly>'
+            this.si22.setAttribute('disabled', '')
+        }
+    }
+
+    decimoVenteCuartoSi() {
+        if (this.si23.value == 'si') {
+            this.si23.style.display = 'none'
+            this.inp23.innerHTML = '<input type="text" name="stateSecurityElemenstAndServis" id="si23" value="si" readonly>'
+            this.no23.setAttribute('disabled', '')
+        }
+    }
+   decimoVenteCuartoNO(){
+        if (this.no23.value == 'no') {
+            this.no23.style.display = 'none'
+            this.inp23.innerHTML = '<input type="text" name="stateSecurityElemenstAndServis" id="no23" value="no" readonly>'
+            this.si23.setAttribute('disabled', '')
+        }
+    }
+
+    decimoVenteCincoSi() {
+        if (this.si24.value == 'si') {
+            this.si24.style.display = 'none'
+            this.inp24.innerHTML = '<input type="text" name="stateSecurityElemenstAndServis" id="si24" value="si" readonly>'
+            this.no24.setAttribute('disabled', '')
+        }
+    }
+   decimoVenteCincoNO(){
+        if (this.no24.value == 'no') {
+            this.no24.style.display = 'none'
+            this.inp24.innerHTML = '<input type="text" name="stateSecurityElemenstAndServis" id="no24" value="no" readonly>'
+            this.si24.setAttribute('disabled', '')
+        }
+    }
+
+    decimoVenteSeisSi() {
+        if (this.si25.value == 'si') {
+            this.si25.style.display = 'none'
+            this.inp25.innerHTML = '<input type="text" name="stateSecurityElemenstAndServis" id="si25" value="si" readonly>'
+            this.no25.setAttribute('disabled', '')
+        }
+    }
+   decimoVenteSeisNO(){
+        if (this.no25.value == 'no') {
+            this.no25.style.display = 'none'
+            this.inp25.innerHTML = '<input type="text" name="stateSecurityElemenstAndServis" id="no25" value="no" readonly>'
+            this.si25.setAttribute('disabled', '')
+        }
+    }
+
+    decimoVenteSieteSi() {
+        if (this.si26.value == 'si') {
+            this.si26.style.display = 'none'
+            this.inp26.innerHTML = '<input type="text" name="stateSecurityElemenstAndServis" id="si26" value="si" readonly>'
+            this.no26.setAttribute('disabled', '')
+        }
+    }
+   decimoVenteSieteNO(){
+        if (this.no26.value == 'no') {
+            this.no26.style.display = 'none'
+            this.inp26.innerHTML = '<input type="text" name="stateSecurityElemenstAndServis" id="no26" value="no" readonly>'
+            this.si26.setAttribute('disabled', '')
+        }
+    }
+
+    decimoVenteOchoSi() {
+        if (this.si27.value == 'si') {
+            this.si27.style.display = 'none'
+            this.inp27.innerHTML = '<input type="text" name="stateSecurityElemenstAndServis" id="si27" value="si" readonly>'
+            this.no27.setAttribute('disabled', '')
+        }
+    }
+   decimoVenteOchoNO(){
+        if (this.no27.value == 'no') {
+            this.no27.style.display = 'none'
+            this.inp27.innerHTML = '<input type="text" name="stateSecurityElemenstAndServis" id="no27" value="no" readonly>'
+            this.si27.setAttribute('disabled', '')
+        }
+    }
+
+    decimoVenteNueveSi() {
+        if (this.si28.value == 'si') {
+            this.si28.style.display = 'none'
+            this.inp28.innerHTML = '<input type="text" name="stateSecurityElemenstAndServis" id="si28" value="si" readonly>'
+            this.no28.setAttribute('disabled', '')
+        }
+    }
+   decimoVenteNueveNO(){
+        if (this.no28.value == 'no') {
+            this.no28.style.display = 'none'
+            this.inp28.innerHTML = '<input type="text" name="stateSecurityElemenstAndServis" id="no28" value="no" readonly>'
+            this.si28.setAttribute('disabled', '')
+        }
+    }
+
+    decimoTreintaSi() {
+        if (this.si29.value == 'si') {
+            this.si29.style.display = 'none'
+            this.inp29.innerHTML = '<input type="text" name="stateSecurityElemenstAndServis" id="si29" value="si" readonly>'
+            this.no29.setAttribute('disabled', '')
+        }
+    }
+   decimoTreintaNO(){
+        if (this.no29.value == 'no') {
+            this.no29.style.display = 'none'
+            this.inp29.innerHTML = '<input type="text" name="stateSecurityElemenstAndServis" id="no29" value="no" readonly>'
+            this.si29.setAttribute('disabled', '')
+        }
+    }
+
+    decimoTreintaUnoSi() {
+        if (this.si30.value == 'si') {
+            this.si30.style.display = 'none'
+            this.inp30.innerHTML = '<input type="text" name="stateSecurityElemenstAndServis" id="si30" value="si" readonly>'
+            this.no30.setAttribute('disabled', '')
+        }
+    }
+   decimoTreintaUnoNO(){
+        if (this.no30.value == 'no') {
+            this.no30.style.display = 'none'
+            this.inp30.innerHTML = '<input type="text" name="stateSecurityElemenstAndServis" id="no30" value="no" readonly>'
+            this.si30.setAttribute('disabled', '')
+        }
+    }
 }
 
 let siOno = new siNo()
