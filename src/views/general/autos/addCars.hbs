@@ -5,9 +5,9 @@
     <div id="contenedor">
         <!-- Aquí comienza la seccion de imagen -->
         <div id="imagen">
-            <label>Foto del Vehìculo</label>
+            <label>Foto del Vehículo</label>
             <div id="cambioImagen">
-                <img src="/img/user/NoImagen.jpg" id="imagenPrevisualizacion" />
+                <img src="/img/icons/black/no-car.png" id="imagenPrevisualizacion" />
             </div>
             <input type="file" name="imageCars" id="seleccionArchivos" accept="image/*" required />
         </div>
@@ -17,12 +17,12 @@
         <div id="formulario">
             <div id="titulo">
                 {{#each maxId}}
-                <p>NUEVO CARRO</p>
+                <h5><b>NUEVO CARRO</b></h5>
                 <input type="text" name="idCarro" value="{{maximo}}" id="numero" readonly>
                 {{/each}}
             </div>
 
-            <div id="Matricula">
+            <div id="Placa">
                 <label>Placa:</label>
                 <input type="text" name="licenseplateCars" required />
             </div>
@@ -38,30 +38,55 @@
             </div>
 
             <div id="FechaMatricula">
-                <label>Fecha de Matricula:</label>
+                <label>Fecha de Matrícula:</label>
                 <input type="date" name="yearsLicenseplateCars" id="" required>
             </div>
 
             <div id="FechaCasudidad">
-                <label>Fecha Caducidad Matricula:</label>
+                <label>Fecha Caducidad Matrícula:</label>
                 <input type="date" name="YearsExpirationLicensePlateCars" id="" required>
             </div>
 
             <div id="Clase">
                 <label>Clase:</label>
                 <select name="classCars" id="">
-                    <option value="A"><p>A</p></option>
-                    <option value="B"><p>B</p></option>
-                    <option value="C"><p>C</p></option>
-                    <option value="D"><p>D</p></option>
-                    <option value="E"><p>E</p></option>
-                    <option value="F"><p>F</p></option>
-                    <option value="SUV"><p>SUV</p></option>
-                    <option value="M"><p>M</p></option>
-                    <option value="S"><p>S</p></option>
+                    <option value="A">
+                        <p>A</p>
+                    </option>
+
+                    <option value="B">
+                        <p>B</p>
+                    </option>
+
+                    <option value="C">
+                        <p>C</p>
+                    </option>
+
+                    <option value="D">
+                        <p>D</p>
+                    </option>
+
+                    <option value="E">
+                        <p>E</p>
+                    </option>
+
+                    <option value="F">
+                        <p>F</p>
+                    </option>
+
+                    <option value="SUV">
+                        <p>SUV</p>
+                    </option>
+
+                    <option value="M">
+                        <p>M</p>
+                    </option>
+
+                    <option value="S">
+                        <p>S</p>
+                    </option>
                 </select>
             </div>
-
 
             <div id="Color">
                 <label>Color:</label>
@@ -83,12 +108,9 @@
                 <input type="text" name="yearsCars" required>
             </div>
         </div>
+        
         <div id="boton">
-            <button type="submit">
-                <div id="iconoGuardar">
-                    <img src="/img/icons/white/save.png">
-                </div>
-            </button>
+            <button type="submit">Guardar</button>
         </div>
     </div>
 </form>
