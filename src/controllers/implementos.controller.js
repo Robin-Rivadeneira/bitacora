@@ -5,19 +5,20 @@ const sql = require('../Database/dataBase.sql')
 
 implemento.showImplemeto = async (req, res) => {
     const list = await sql.query('select * from Cars')
-    res.render('general/autos/implementos/agregar', { list })
+    const maximo = await sql.query('select max(idSecurityElemenstAndServis) as maximo from securityelemenstandservis')
+    res.render('general/autos/implementos/agregar', { list, maximo })
 }
 
 implemento.sendImplemeto = async (req, res) => {
     const id = req.user.idUsers
-    const { idCars, typeSecurityElemenstAndServisDetails, dateSecurityElemenstAndServis, nameSecurityElemenstAndServisDetails, stateSecurityElemenstAndServisDetails, observationSecurityElemenstAndServis } = req.body
+    const { idCars, idSeguridad, typeSecurityElemenstAndServisDetails, dateSecurityElemenstAndServis, nameSecurityElemenstAndServisDetails, stateSecurityElemenstAndServisDetails, observationSecurityElemenstAndServis } = req.body
     const newSegurity ={
         dateSecurityElemenstAndServis,
         observationSecurityElemenstAndServis
     }
     await orm.seguridadElementos.create(newSegurity)
     for (let i = 0; i < stateSecurityElemenstAndServisDetails.length; i++) {
-        await sql.query('INSERT INTO SecurityElemenstAndServisDetails ( nameSecurityElemenstAndServisDetails, typeSecurityElemenstAndServisDetails, stateSecurityElemenstAndServisDetails, userIdUsers, CarIdCars) VALUES (?,?,?,?,?,?,?)', [ nameSecurityElemenstAndServisDetails[i], typeSecurityElemenstAndServisDetails, stateSecurityElemenstAndServisDetails[i], id, idCars])
+        await sql.query('INSERT INTO SecurityElemenstAndServisDetails ( nameSecurityElemenstAndServisDetails, typeSecurityElemenstAndServisDetails, stateSecurityElemenstAndServisDetails, userIdUsers, CarIdCars, SecurityElemenstAndServiIdSecurityElemenstAndServis) VALUES (?,?,?,?,?,?)', [ nameSecurityElemenstAndServisDetails[i], typeSecurityElemenstAndServisDetails, stateSecurityElemenstAndServisDetails[i], id, idCars, idSeguridad])
     }
     req.flash('success', 'Guardado')
     res.redirect('/cars/implementos/list/' + id);
