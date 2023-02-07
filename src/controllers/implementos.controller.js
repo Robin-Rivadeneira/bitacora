@@ -35,9 +35,10 @@ implemento.detalleImplemeto = async (req, res) => {
 
 implemento.bringImplemeto = async (req, res) => {
     const id = req.params.id
-    const list = await sql.query('select * from Cars')
-    const implementos = await sql.query('select * from securityelemenstandservis where idSecurityElemenstAndServis = ?', [id])
-    res.render('general/autos/implementos/editar', { list, implementos })
+    const cars = await sql.query('select DISTINCT idCars,licenseplateCars,modelCars,brandCars from implementos where idCars = ?', [id])
+    const seguridad = await sql.query('select DISTINCT idSecurityElemenstAndServis,dateSecurityElemenstAndServis,observationSecurityElemenstAndServis from implementos where CarsIdCars = ?', [id])
+    const detalle = await sql.query('select DISTINCT nameSecurityElemenstAndServisDetails,typeSecurityElemenstAndServisDetails,stateSecurityElemenstAndServisDetails from implementos where CarsIdCars = ?', [id])
+    res.render('general/autos/implementos/editar', {seguridad, cars, detalle })
 }
 
 implemento.updateImplemeto = async (req, res) => {
