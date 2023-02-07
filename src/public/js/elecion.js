@@ -21,6 +21,7 @@ class eleccion {
 let elecciones = new eleccion()
 
 window.onload = elecciones.inicio()
+
 /*
 class eleccion {
 	constructor() {

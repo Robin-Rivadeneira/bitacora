@@ -10,11 +10,13 @@
                 </div>
 
                 <div id="matricula">
+                    <label>Placa:</label>
                     <p>{{licenseplateCars}}</p>
                 </div>
 
                 <div id="modelo">
-                    <p>{{modelCars}}</p>
+                    <label>Modelo:</label>
+                    <p>{{brandCars}} {{modelCars}}</p>
                 </div>
 
                 <div id="editar">
@@ -27,19 +29,27 @@
                     <a href="/cars/matricula/list/{{idCars}}">
                         <button type="button">Matricula</button>
                     </a>
-                    
+                </div>
+
+                <div id="kilometraje">
                     <a href="/cars/kilometraje/list/{{idCars}}">
                         <button type="button">kilometraje</button>
                     </a>
-                    
+                </div>
+
+                <div id="orden">
                     <a href="/cars/ordenTrabajo/list/{{idCars}}">
                         <button type="button">Orden Trabajo</button>
                     </a>
-                    
+                </div>
+
+                <div id="implemento">
                     <a href="/cars/implementos/list/{{idCars}}">
                         <button type="button">Implementos</button>
                     </a>
-                    
+                </div>
+
+                <div id="mantenimiento">
                     <a href="/cars/mantenimiento/list/{{idCars}}">
                         <button type="button">Mantenimiento</button>
                     </a>
