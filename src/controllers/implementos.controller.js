@@ -11,32 +11,17 @@ implemento.showImplemeto = async (req, res) => {
 implemento.sendImplemeto = async (req, res) => {
     const id = req.user.idUsers
     const { idCars, typeSecurityElemenstAndServis, dateSecurityElemenstAndServis, nameSecurityElemenstAndServis, stateSecurityElemenstAndServis, observationSecurityElemenstAndServis } = req.body
-    const newImplemento = {
-        nameSecurityElemenstAndServis,
-        dateSecurityElemenstAndServis,
-        typeSecurityElemenstAndServis,
-        stateSecurityElemenstAndServis,
-        observationSecurityElemenstAndServis,
-        userIdUsers: id,
-        CarIdCars: idCars
-    }
-
     for (let i = 0; i < stateSecurityElemenstAndServis.length; i++) {
-        await orm.seguridadElementos.create(newImplemento[i])
+        await sql.query('INSERT INTO dateSecurityElemenstAndServis (dateSecurityElemenstAndServis, nameSecurityElemenstAndServis, typeSecurityElemenstAndServis, stateSecurityElemenstAndServis, observationSecurityElemenstAndServis, userIdUsers, CarIdCars) VALUES (?,?,?,?,?,?,?)', [dateSecurityElemenstAndServis[i], nameSecurityElemenstAndServis[i],typeSecurityElemenstAndServis[i], stateSecurityElemenstAndServis[i], observationSecurityElemenstAndServis[i], id, idCars])
     }
     req.flash('success', 'Guardado')
     res.redirect('/cars/implementos/list/' + id);
 }
 
-implemento.listImplemeto = async (req, res) => {
-    const implementos = await sql.query('select * from securityelemenstandservis')
-    res.render('general/autos/implementos/lista', { implementos })
-}
-
 implemento.detalleImplemeto = async (req, res) => {
     const id = req.params.id
     const list = await sql.query('select * from Cars')
-    const implementos = await sql.query('select * from securityelemenstandservis where idSecurityElemenstAndServis = ?', [id])
+    const implementos = await sql.query('select * from implementos where userIdUsers = ?', [id])
     res.render('general/autos/implementos/detalle', { list, implementos })
 }
 
