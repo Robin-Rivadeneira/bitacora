@@ -14,7 +14,8 @@ implemento.sendImplemeto = async (req, res) => {
     const { idCars, idSeguridad, typeSecurityElemenstAndServisDetails, dateSecurityElemenstAndServis, nameSecurityElemenstAndServisDetails, stateSecurityElemenstAndServisDetails, observationSecurityElemenstAndServis } = req.body
     const newSegurity ={
         dateSecurityElemenstAndServis,
-        observationSecurityElemenstAndServis
+        observationSecurityElemenstAndServis,
+        CarIdCars: idCars
     }
     await orm.seguridadElementos.create(newSegurity)
     for (let i = 0; i < stateSecurityElemenstAndServisDetails.length; i++) {
@@ -27,8 +28,9 @@ implemento.sendImplemeto = async (req, res) => {
 implemento.detalleImplemeto = async (req, res) => {
     const id = req.params.id
     const cars = await sql.query('select DISTINCT idCars,licenseplateCars,modelCars,brandCars from implementos where idCars = ?', [id])
-    const implementos = await sql.query('select DISTINCT idCars,licenseplateCars,modelCars,brandCars from implementos where idCars = ?', [id])
-    res.render('general/autos/implementos/detalle', {implementos })
+    const seguridad = await sql.query('select DISTINCT idSecurityElemenstAndServis,dateSecurityElemenstAndServis,observationSecurityElemenstAndServis from implementos where CarsIdCars = ?', [id])
+    const detalle = await sql.query('select DISTINCT nameSecurityElemenstAndServisDetails,typeSecurityElemenstAndServisDetails,stateSecurityElemenstAndServisDetails from implementos where CarsIdCars = ?', [id])
+    res.render('general/autos/implementos/detalle', {seguridad, cars, detalle })
 }
 
 implemento.bringImplemeto = async (req, res) => {

@@ -1,6 +1,8 @@
 <link rel="stylesheet" href="style.css">
-{{#each implementos}}
+{{#each seguridad}}
 <form action="/cars/implementos/list/{{idSecurityElemenstAndServis}}" method="post">
+{{/each}}
+{{#each cars}}
     <div id="DatosCarro">
         <div id="vehiculo">
             <label>VEHÍCULO N°: <p>{{idCars}}</p></label>
@@ -15,6 +17,8 @@
             <label>Modelo: <p>{{brandCars}}</p></label>
         </div>
     </div>
+{{/each}}
+{{#each detalle}}
     <div id="datos">
         <div id="primero">
             <label>CODIGOS DE ESPECIFICACIÓN</label>
