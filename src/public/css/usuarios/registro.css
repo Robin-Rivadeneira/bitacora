@@ -1,8 +1,8 @@
 #contenedor {
-    max-width: 42.5%;
-    max-height: 90%;
+    max-width: 90%;
+    max-height: 80%;
     position: absolute;
-    top: 5%;
+    top: 14.5%;
     left: 5%;
     text-align: center;
 }
@@ -33,7 +33,7 @@
     font-size: 30px;
 }
 
-/*Aquí comienza formulario*/
+/* Aquí comienza formulario */
 #formulario {
     background-color: white;
     width: 90%;
