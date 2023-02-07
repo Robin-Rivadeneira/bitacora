@@ -20,7 +20,10 @@ implemento.sendImplemeto = async (req, res) => {
         userIdUsers: id,
         CarIdCars: idCars
     }
-    await orm.seguridadElementos.create(newImplemento)
+
+    for (let i = 0; i < stateSecurityElemenstAndServis.length; i++) {
+        await orm.seguridadElementos.create(newImplemento[i])
+    }
     req.flash('success', 'Guardado')
     res.redirect('/cars/implementos/list/' + id);
 }
@@ -57,7 +60,9 @@ implemento.updateImplemeto = async (req, res) => {
     }
     await orm.seguridadElementos.findOne({ where: { idSecurityElemenstAndServis: ids } })
         .then((acutalizar) => {
-            acutalizar.update(newImplemento)
+            for (let i = 0; i < stateSecurityElemenstAndServis.length; i++) {
+            acutalizar.update(newImplemento[i])
+            }
             req.flash('success', 'Guardado')
             res.redirect('/cars/implementos/list/' + id);
         })
