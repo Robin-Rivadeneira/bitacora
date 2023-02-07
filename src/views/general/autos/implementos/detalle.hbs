@@ -1,9 +1,9 @@
 <link rel="stylesheet" href="style.css">
-<form action="/cars/implementos/list/{{}}" method="post">
+{{#each implementos}}
+<form action="/cars/implementos/list/{{idSecurityElemenstAndServis}}" method="post">
     <div id="DatosCarro">
-        {{#each list}}
         <div id="vehiculo">
-            <label>VEHÍCULO N°:<input type="text" name="idCars" id="" value="{{idCars}}"></label>
+            <label>VEHÍCULO N°: <p>{{idCars}}</p></label>
         </div>
         <div id="Placa">
             <label>PLACA: <p>{{licenseplateCars}}</p></label>
@@ -14,7 +14,6 @@
         <div id="Modelo">
             <label>Modelo: <p>{{brandCars}}</p></label>
         </div>
-        {{/each}}
     </div>
     <div id="datos">
         <div id="primero">
@@ -48,3 +47,4 @@
         <p>{{observationSecurityElemenstAndServis}}</p>
     </div>
 </form>
+{{/each}}

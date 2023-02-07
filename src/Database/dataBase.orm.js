@@ -13,6 +13,7 @@ const matriculasModel = require('../models/matriculas')
 const motocyclesModel = require('../models/motorcycles')
 const responsableModel = require('../models/responsible')
 const seguridadElementosModelos = require('../models/seguridadElementos')
+const seguridadElementosDetalleModelos = require('../models/seguridadElementosDetalle')
 const vendorModelos = require('../models/proveedor')
 const ordenTrabajoModelos = require('../models/ordenTrabajo')
 
@@ -54,8 +55,12 @@ const matriculas = matriculasModel(sequelize, Sequelize)
 const motorcycles = motocyclesModel(sequelize, Sequelize)
 const responsible = responsableModel(sequelize, Sequelize)
 const seguridadElementos = seguridadElementosModelos(sequelize, Sequelize)
+const seguridadElementosDetalle = seguridadElementosDetalleModelos(sequelize, Sequelize)
 const vendor = vendorModelos(sequelize, Sequelize)
 const ordenTrabajo = ordenTrabajoModelos(sequelize, Sequelize)
+
+seguridadElementos.hasMany(seguridadElementosDetalle)
+seguridadElementosDetalle.belongsTo(seguridadElementos)
 
 matriculas.hasMany(impuestoMatricula)
 impuestoMatricula.belongsTo(matriculas)
@@ -84,8 +89,8 @@ user.hasMany(mantenimiento)
 mantenimiento.belongsTo(user)
 user.hasMany(responsible)
 responsible.belongsTo(user)
-user.hasMany(seguridadElementos)
-seguridadElementos.belongsTo(user)
+user.hasMany(seguridadElementosDetalle)
+seguridadElementosDetalle.belongsTo(user)
 user.hasMany(matriculas)
 matriculas.belongsTo(user)
 
@@ -105,8 +110,8 @@ cars.hasMany(mantenimiento)
 mantenimiento.belongsTo(cars)
 cars.hasMany(responsible)
 responsible.belongsTo(cars)
-cars.hasMany(seguridadElementos)
-seguridadElementos.belongsTo(cars)
+cars.hasMany(seguridadElementosDetalle)
+seguridadElementosDetalle.belongsTo(cars)
 cars.hasMany(matriculas)
 matriculas.belongsTo(cars)
 
@@ -126,8 +131,8 @@ motorcycles.hasMany(mantenimiento)
 mantenimiento.belongsTo(motorcycles)
 motorcycles.hasMany(responsible)
 responsible.belongsTo(motorcycles)
-motorcycles.hasMany(seguridadElementos)
-seguridadElementos.belongsTo(motorcycles)
+motorcycles.hasMany(seguridadElementosDetalle)
+seguridadElementosDetalle.belongsTo(motorcycles)
 motorcycles.hasMany(matriculas)
 matriculas.belongsTo(motorcycles)
 
@@ -145,6 +150,7 @@ module.exports = {
 	motorcycles,
 	responsible,
 	seguridadElementos,
+	seguridadElementosDetalle,
 	vendor,
 	ordenTrabajo
 };

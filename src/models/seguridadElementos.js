@@ -6,9 +6,6 @@ const SecurityElemenstAndServis = (sequelize, type) => {
             autoIncrement: true
         },
         dateSecurityElemenstAndServis: type.STRING,
-        nameSecurityElemenstAndServis: type.STRING,
-        typeSecurityElemenstAndServis: type.STRING,
-        stateSecurityElemenstAndServis: type.STRING,
         observationSecurityElemenstAndServis: type.STRING,
         creatSecurityElemenstAndServis: {
             type: 'TIMESTAMP',

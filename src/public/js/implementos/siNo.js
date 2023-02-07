@@ -124,14 +124,14 @@ class siNo {
     primerSi() {
         if (this.si.value == 'si') {
             this.si.style.display = 'none'
-            this.inp.innerHTML = '<input type="text" name="stateSecurityElemenstAndServis" id="si" value="si" readonly>'
+            this.inp.innerHTML = '<input type="text" name="stateSecurityElemenstAndServisDetails" id="si" value="si" readonly>'
             this.no.setAttribute('disabled', '')
         }
     }
     primerNO(){
         if (this.no.value == 'no') {
             this.no.style.display = 'none'
-            this.inp.innerHTML = '<input type="text" name="stateSecurityElemenstAndServis" id="no" value="no" readonly>'
+            this.inp.innerHTML = '<input type="text" name="stateSecurityElemenstAndServisDetails" id="no" value="no" readonly>'
             this.si.setAttribute('disabled', '')
         }
     }
@@ -139,14 +139,14 @@ class siNo {
     segundoSi() {
         if (this.si1.value == 'si') {
             this.si1.style.display = 'none'
-            this.inp1.innerHTML = '<input type="text" name="stateSecurityElemenstAndServis" id="si1" value="si" readonly>'
+            this.inp1.innerHTML = '<input type="text" name="stateSecurityElemenstAndServisDetails" id="si1" value="si" readonly>'
             this.no1.setAttribute('disabled', '')
         }
     }
     segundoNO(){
         if (this.no1.value == 'no') {
             this.no1.style.display = 'none'
-            this.inp1.innerHTML = '<input type="text" name="stateSecurityElemenstAndServis" id="no1" value="no" readonly>'
+            this.inp1.innerHTML = '<input type="text" name="stateSecurityElemenstAndServisDetails" id="no1" value="no" readonly>'
             this.si1.setAttribute('disabled', '')
         }
     }
@@ -154,14 +154,14 @@ class siNo {
     terseroSi() {
         if (this.si2.value == 'si') {
             this.si2.style.display = 'none'
-            this.inp2.innerHTML = '<input type="text" name="stateSecurityElemenstAndServis" id="si2" value="si" readonly>'
+            this.inp2.innerHTML = '<input type="text" name="stateSecurityElemenstAndServisDetails" id="si2" value="si" readonly>'
             this.no2.setAttribute('disabled', '')
         }
     }
     terseroNO(){
         if (this.no2.value == 'no') {
             this.no2.style.display = 'none'
-            this.inp2.innerHTML = '<input type="text" name="stateSecurityElemenstAndServis" id="no2" value="no" readonly>'
+            this.inp2.innerHTML = '<input type="text" name="stateSecurityElemenstAndServisDetails" id="no2" value="no" readonly>'
             this.si2.setAttribute('disabled', '')
         }
     }
@@ -169,14 +169,14 @@ class siNo {
     cuartoSi() {
         if (this.si3.value == 'si') {
             this.si3.style.display = 'none'
-            this.inp3.innerHTML = '<input type="text" name="stateSecurityElemenstAndServis" id="si3" value="si" readonly>'
+            this.inp3.innerHTML = '<input type="text" name="stateSecurityElemenstAndServisDetails" id="si3" value="si" readonly>'
             this.no3.setAttribute('disabled', '')
         }
     }
     cuartoNO(){
         if (this.no3.value == 'no') {
             this.no3.style.display = 'none'
-            this.inp3.innerHTML = '<input type="text" name="stateSecurityElemenstAndServis" id="no3" value="no" readonly>'
+            this.inp3.innerHTML = '<input type="text" name="stateSecurityElemenstAndServisDetails" id="no3" value="no" readonly>'
             this.si3.setAttribute('disabled', '')
         }
     }
@@ -184,14 +184,14 @@ class siNo {
     quintoSi() {
         if (this.si4.value == 'si') {
             this.si4.style.display = 'none'
-            this.inp4.innerHTML = '<input type="text" name="stateSecurityElemenstAndServis" id="si4" value="si" readonly>'
+            this.inp4.innerHTML = '<input type="text" name="stateSecurityElemenstAndServisDetails" id="si4" value="si" readonly>'
             this.no4.setAttribute('disabled', '')
         }
     }
     quintoNO(){
         if (this.no4.value == 'no') {
             this.no4.style.display = 'none'
-            this.inp4.innerHTML = '<input type="text" name="stateSecurityElemenstAndServis" id="no4" value="no" readonly>'
+            this.inp4.innerHTML = '<input type="text" name="stateSecurityElemenstAndServisDetails" id="no4" value="no" readonly>'
             this.si4.setAttribute('disabled', '')
         }
     }
@@ -199,14 +199,14 @@ class siNo {
    sextoSi() {
         if (this.si5.value == 'si') {
             this.si5.style.display = 'none'
-            this.inp5.innerHTML = '<input type="text" name="stateSecurityElemenstAndServis" id="si5" value="si" readonly>'
+            this.inp5.innerHTML = '<input type="text" name="stateSecurityElemenstAndServisDetails" id="si5" value="si" readonly>'
             this.no5.setAttribute('disabled', '')
         }
     }
    sextoNO(){
         if (this.no5.value == 'no') {
             this.no5.style.display = 'none'
-            this.inp5.innerHTML = '<input type="text" name="stateSecurityElemenstAndServis" id="no5" value="no" readonly>'
+            this.inp5.innerHTML = '<input type="text" name="stateSecurityElemenstAndServisDetails" id="no5" value="no" readonly>'
             this.si5.setAttribute('disabled', '')
         }
     }
@@ -214,14 +214,14 @@ class siNo {
     septimoSi() {
         if (this.si6.value == 'si') {
             this.si6.style.display = 'none'
-            this.inp6.innerHTML = '<input type="text" name="stateSecurityElemenstAndServis" id="si6" value="si" readonly>'
+            this.inp6.innerHTML = '<input type="text" name="stateSecurityElemenstAndServisDetails" id="si6" value="si" readonly>'
             this.no6.setAttribute('disabled', '')
         }
     }
    septimoNO(){
         if (this.no6.value == 'no') {
             this.no6.style.display = 'none'
-            this.inp6.innerHTML = '<input type="text" name="stateSecurityElemenstAndServis" id="no6" value="no" readonly>'
+            this.inp6.innerHTML = '<input type="text" name="stateSecurityElemenstAndServisDetails" id="no6" value="no" readonly>'
             this.si6.setAttribute('disabled', '')
         }
     }
@@ -229,14 +229,14 @@ class siNo {
     octaboSi() {
         if (this.si7.value == 'si') {
             this.si7.style.display = 'none'
-            this.inp7.innerHTML = '<input type="text" name="stateSecurityElemenstAndServis" id="si7" value="si" readonly>'
+            this.inp7.innerHTML = '<input type="text" name="stateSecurityElemenstAndServisDetails" id="si7" value="si" readonly>'
             this.no7.setAttribute('disabled', '')
         }
     }
    octaboNO(){
         if (this.no7.value == 'no') {
             this.no7.style.display = 'none'
-            this.inp7.innerHTML = '<input type="text" name="stateSecurityElemenstAndServis" id="no7" value="no" readonly>'
+            this.inp7.innerHTML = '<input type="text" name="stateSecurityElemenstAndServisDetails" id="no7" value="no" readonly>'
             this.si7.setAttribute('disabled', '')
         }
     }
@@ -244,14 +244,14 @@ class siNo {
     novenoSi() {
         if (this.si8.value == 'si') {
             this.si8.style.display = 'none'
-            this.inp8.innerHTML = '<input type="text" name="stateSecurityElemenstAndServis" id="si8" value="si" readonly>'
+            this.inp8.innerHTML = '<input type="text" name="stateSecurityElemenstAndServisDetails" id="si8" value="si" readonly>'
             this.no8.setAttribute('disabled', '')
         }
     }
    novenoNO(){
         if (this.no8.value == 'no') {
             this.no8.style.display = 'none'
-            this.inp8.innerHTML = '<input type="text" name="stateSecurityElemenstAndServis" id="no8" value="no" readonly>'
+            this.inp8.innerHTML = '<input type="text" name="stateSecurityElemenstAndServisDetails" id="no8" value="no" readonly>'
             this.si8.setAttribute('disabled', '')
         }
     }
@@ -259,14 +259,14 @@ class siNo {
     decimoSi() {
         if (this.si9.value == 'si') {
             this.si9.style.display = 'none'
-            this.inp9.innerHTML = '<input type="text" name="stateSecurityElemenstAndServis" id="si9" value="si" readonly>'
+            this.inp9.innerHTML = '<input type="text" name="stateSecurityElemenstAndServisDetails" id="si9" value="si" readonly>'
             this.no9.setAttribute('disabled', '')
         }
     }
    decimoNO(){
         if (this.no9.value == 'no') {
             this.no9.style.display = 'none'
-            this.inp9.innerHTML = '<input type="text" name="stateSecurityElemenstAndServis" id="no9" value="no" readonly>'
+            this.inp9.innerHTML = '<input type="text" name="stateSecurityElemenstAndServisDetails" id="no9" value="no" readonly>'
             this.si9.setAttribute('disabled', '')
         }
     }
@@ -274,14 +274,14 @@ class siNo {
     decimoPrimeroSi() {
         if (this.si10.value == 'si') {
             this.si10.style.display = 'none'
-            this.inp10.innerHTML = '<input type="text" name="stateSecurityElemenstAndServis" id="si10" value="si" readonly>'
+            this.inp10.innerHTML = '<input type="text" name="stateSecurityElemenstAndServisDetails" id="si10" value="si" readonly>'
             this.no10.setAttribute('disabled', '')
         }
     }
    decimoPrimeroNO(){
         if (this.no10.value == 'no') {
             this.no10.style.display = 'none'
-            this.inp10.innerHTML = '<input type="text" name="stateSecurityElemenstAndServis" id="no10" value="no" readonly>'
+            this.inp10.innerHTML = '<input type="text" name="stateSecurityElemenstAndServisDetails" id="no10" value="no" readonly>'
             this.si10.setAttribute('disabled', '')
         }
     }
@@ -289,14 +289,14 @@ class siNo {
     decimoSegundoSi() {
         if (this.si11.value == 'si') {
             this.si11.style.display = 'none'
-            this.inp11.innerHTML = '<input type="text" name="stateSecurityElemenstAndServis" id="si11" value="si" readonly>'
+            this.inp11.innerHTML = '<input type="text" name="stateSecurityElemenstAndServisDetails" id="si11" value="si" readonly>'
             this.no11.setAttribute('disabled', '')
         }
     }
    decimoSegundoNO(){
         if (this.no11.value == 'no') {
             this.no11.style.display = 'none'
-            this.inp11.innerHTML = '<input type="text" name="stateSecurityElemenstAndServis" id="no11" value="no" readonly>'
+            this.inp11.innerHTML = '<input type="text" name="stateSecurityElemenstAndServisDetails" id="no11" value="no" readonly>'
             this.si11.setAttribute('disabled', '')
         }
     }
@@ -304,14 +304,14 @@ class siNo {
     decimoTerceroSi() {
         if (this.si12.value == 'si') {
             this.si12.style.display = 'none'
-            this.inp12.innerHTML = '<input type="text" name="stateSecurityElemenstAndServis" id="si12" value="si" readonly>'
+            this.inp12.innerHTML = '<input type="text" name="stateSecurityElemenstAndServisDetails" id="si12" value="si" readonly>'
             this.no12.setAttribute('disabled', '')
         }
     }
    decimoTerceroNO(){
         if (this.no12.value == 'no') {
             this.no12.style.display = 'none'
-            this.inp12.innerHTML = '<input type="text" name="stateSecurityElemenstAndServis" id="no12" value="no" readonly>'
+            this.inp12.innerHTML = '<input type="text" name="stateSecurityElemenstAndServisDetails" id="no12" value="no" readonly>'
             this.si12.setAttribute('disabled', '')
         }
     }
@@ -319,14 +319,14 @@ class siNo {
     decimoCuartoSi() {
         if (this.si13.value == 'si') {
             this.si13.style.display = 'none'
-            this.inp13.innerHTML = '<input type="text" name="stateSecurityElemenstAndServis" id="si13" value="si" readonly>'
+            this.inp13.innerHTML = '<input type="text" name="stateSecurityElemenstAndServisDetails" id="si13" value="si" readonly>'
             this.no13.setAttribute('disabled', '')
         }
     }
    decimoCuartoNO(){
         if (this.no13.value == 'no') {
             this.no13.style.display = 'none'
-            this.inp13.innerHTML = '<input type="text" name="stateSecurityElemenstAndServis" id="no13" value="no" readonly>'
+            this.inp13.innerHTML = '<input type="text" name="stateSecurityElemenstAndServisDetails" id="no13" value="no" readonly>'
             this.si13.setAttribute('disabled', '')
         }
     }
@@ -334,14 +334,14 @@ class siNo {
     decimoQuintoSi() {
         if (this.si14.value == 'si') {
             this.si14.style.display = 'none'
-            this.inp14.innerHTML = '<input type="text" name="stateSecurityElemenstAndServis" id="si14" value="si" readonly>'
+            this.inp14.innerHTML = '<input type="text" name="stateSecurityElemenstAndServisDetails" id="si14" value="si" readonly>'
             this.no14.setAttribute('disabled', '')
         }
     }
    decimoQuintoNO(){
         if (this.no14.value == 'no') {
             this.no14.style.display = 'none'
-            this.inp14.innerHTML = '<input type="text" name="stateSecurityElemenstAndServis" id="no14" value="no" readonly>'
+            this.inp14.innerHTML = '<input type="text" name="stateSecurityElemenstAndServisDetails" id="no14" value="no" readonly>'
             this.si14.setAttribute('disabled', '')
         }
     }
@@ -349,14 +349,14 @@ class siNo {
     decimoSextoSi() {
         if (this.si15.value == 'si') {
             this.si15.style.display = 'none'
-            this.inp15.innerHTML = '<input type="text" name="stateSecurityElemenstAndServis" id="si15" value="si" readonly>'
+            this.inp15.innerHTML = '<input type="text" name="stateSecurityElemenstAndServisDetails" id="si15" value="si" readonly>'
             this.no15.setAttribute('disabled', '')
         }
     }
    decimoSextoNO(){
         if (this.no15.value == 'no') {
             this.no15.style.display = 'none'
-            this.inp15.innerHTML = '<input type="text" name="stateSecurityElemenstAndServis" id="no15" value="no" readonly>'
+            this.inp15.innerHTML = '<input type="text" name="stateSecurityElemenstAndServisDetails" id="no15" value="no" readonly>'
             this.si15.setAttribute('disabled', '')
         }
     }
@@ -364,14 +364,14 @@ class siNo {
     decimoSeptimoSi(){
         if (this.si16.value == 'si') {
             this.si16.style.display = 'none'
-            this.inp16.innerHTML = '<input type="text" name="stateSecurityElemenstAndServis" id="si16" value="si" readonly>'
+            this.inp16.innerHTML = '<input type="text" name="stateSecurityElemenstAndServisDetails" id="si16" value="si" readonly>'
             this.no16.setAttribute('disabled', '')
         }
     }
    decimoSeptimoNO(){
         if (this.no16.value == 'no') {
             this.no16.style.display = 'none'
-            this.inp16.innerHTML = '<input type="text" name="stateSecurityElemenstAndServis" id="no16" value="no" readonly>'
+            this.inp16.innerHTML = '<input type="text" name="stateSecurityElemenstAndServisDetails" id="no16" value="no" readonly>'
             this.si16.setAttribute('disabled', '')
         }
     }
@@ -379,14 +379,14 @@ class siNo {
     decimoOctaboSi() {
         if (this.si17.value == 'si') {
             this.si17.style.display = 'none'
-            this.inp17.innerHTML = '<input type="text" name="stateSecurityElemenstAndServis" id="si17" value="si" readonly>'
+            this.inp17.innerHTML = '<input type="text" name="stateSecurityElemenstAndServisDetails" id="si17" value="si" readonly>'
             this.no17.setAttribute('disabled', '')
         }
     }
    decimoOctaboNO(){
         if (this.no17.value == 'no') {
             this.no17.style.display = 'none'
-            this.inp17.innerHTML = '<input type="text" name="stateSecurityElemenstAndServis" id="no17" value="no" readonly>'
+            this.inp17.innerHTML = '<input type="text" name="stateSecurityElemenstAndServisDetails" id="no17" value="no" readonly>'
             this.si17.setAttribute('disabled', '')
         }
     }
@@ -394,14 +394,14 @@ class siNo {
     decimoNovenoSi() {
         if (this.si18.value == 'si') {
             this.si18.style.display = 'none'
-            this.inp18.innerHTML = '<input type="text" name="stateSecurityElemenstAndServis" id="si18" value="si" readonly>'
+            this.inp18.innerHTML = '<input type="text" name="stateSecurityElemenstAndServisDetails" id="si18" value="si" readonly>'
             this.no18.setAttribute('disabled', '')
         }
     }
    decimoNovenoNO(){
         if (this.no18.value == 'no') {
             this.no18.style.display = 'none'
-            this.inp18.innerHTML = '<input type="text" name="stateSecurityElemenstAndServis" id="no18" value="no" readonly>'
+            this.inp18.innerHTML = '<input type="text" name="stateSecurityElemenstAndServisDetails" id="no18" value="no" readonly>'
             this.si18.setAttribute('disabled', '')
         }
     }
@@ -409,14 +409,14 @@ class siNo {
     decimoVenteSi() {
         if (this.si19.value == 'si') {
             this.si19.style.display = 'none'
-            this.inp19.innerHTML = '<input type="text" name="stateSecurityElemenstAndServis" id="si19" value="si" readonly>'
+            this.inp19.innerHTML = '<input type="text" name="stateSecurityElemenstAndServisDetails" id="si19" value="si" readonly>'
             this.no19.setAttribute('disabled', '')
         }
     }
    decimoVenteNO(){
         if (this.no19.value == 'no') {
             this.no19.style.display = 'none'
-            this.inp19.innerHTML = '<input type="text" name="stateSecurityElemenstAndServis" id="no19" value="no" readonly>'
+            this.inp19.innerHTML = '<input type="text" name="stateSecurityElemenstAndServisDetails" id="no19" value="no" readonly>'
             this.si19.setAttribute('disabled', '')
         }
     }
@@ -424,14 +424,14 @@ class siNo {
     decimoVenteVentiunoSi() {
         if (this.si20.value == 'si') {
             this.si20.style.display = 'none'
-            this.inp20.innerHTML = '<input type="text" name="stateSecurityElemenstAndServis" id="si20" value="si" readonly>'
+            this.inp20.innerHTML = '<input type="text" name="stateSecurityElemenstAndServisDetails" id="si20" value="si" readonly>'
             this.no20.setAttribute('disabled', '')
         }
     }
    decimoVenteVentiunoNO(){
         if (this.no20.value == 'no') {
             this.no20.style.display = 'none'
-            this.inp20.innerHTML = '<input type="text" name="stateSecurityElemenstAndServis" id="no20" value="no" readonly>'
+            this.inp20.innerHTML = '<input type="text" name="stateSecurityElemenstAndServisDetails" id="no20" value="no" readonly>'
             this.si20.setAttribute('disabled', '')
         }
     }
@@ -439,14 +439,14 @@ class siNo {
     decimoVenteDosSi() {
         if (this.si21.value == 'si') {
             this.si21.style.display = 'none'
-            this.inp21.innerHTML = '<input type="text" name="stateSecurityElemenstAndServis" id="si21" value="si" readonly>'
+            this.inp21.innerHTML = '<input type="text" name="stateSecurityElemenstAndServisDetails" id="si21" value="si" readonly>'
             this.no21.setAttribute('disabled', '')
         }
     }
    decimoVenteDosNO(){
         if (this.no21.value == 'no') {
             this.no21.style.display = 'none'
-            this.inp21.innerHTML = '<input type="text" name="stateSecurityElemenstAndServis" id="no21" value="no" readonly>'
+            this.inp21.innerHTML = '<input type="text" name="stateSecurityElemenstAndServisDetails" id="no21" value="no" readonly>'
             this.si21.setAttribute('disabled', '')
         }
     }
@@ -454,14 +454,14 @@ class siNo {
     decimoVenteTresSi() {
         if (this.si22.value == 'si') {
             this.si22.style.display = 'none'
-            this.inp22.innerHTML = '<input type="text" name="stateSecurityElemenstAndServis" id="si22" value="si" readonly>'
+            this.inp22.innerHTML = '<input type="text" name="stateSecurityElemenstAndServisDetails" id="si22" value="si" readonly>'
             this.no22.setAttribute('disabled', '')
         }
     }
    decimoVenteTresNO(){
         if (this.no22.value == 'no') {
             this.no22.style.display = 'none'
-            this.inp22.innerHTML = '<input type="text" name="stateSecurityElemenstAndServis" id="no22" value="no" readonly>'
+            this.inp22.innerHTML = '<input type="text" name="stateSecurityElemenstAndServisDetails" id="no22" value="no" readonly>'
             this.si22.setAttribute('disabled', '')
         }
     }
@@ -469,14 +469,14 @@ class siNo {
     decimoVenteCuartoSi() {
         if (this.si23.value == 'si') {
             this.si23.style.display = 'none'
-            this.inp23.innerHTML = '<input type="text" name="stateSecurityElemenstAndServis" id="si23" value="si" readonly>'
+            this.inp23.innerHTML = '<input type="text" name="stateSecurityElemenstAndServisDetails" id="si23" value="si" readonly>'
             this.no23.setAttribute('disabled', '')
         }
     }
    decimoVenteCuartoNO(){
         if (this.no23.value == 'no') {
             this.no23.style.display = 'none'
-            this.inp23.innerHTML = '<input type="text" name="stateSecurityElemenstAndServis" id="no23" value="no" readonly>'
+            this.inp23.innerHTML = '<input type="text" name="stateSecurityElemenstAndServisDetails" id="no23" value="no" readonly>'
             this.si23.setAttribute('disabled', '')
         }
     }
@@ -484,14 +484,14 @@ class siNo {
     decimoVenteCincoSi() {
         if (this.si24.value == 'si') {
             this.si24.style.display = 'none'
-            this.inp24.innerHTML = '<input type="text" name="stateSecurityElemenstAndServis" id="si24" value="si" readonly>'
+            this.inp24.innerHTML = '<input type="text" name="stateSecurityElemenstAndServisDetails" id="si24" value="si" readonly>'
             this.no24.setAttribute('disabled', '')
         }
     }
    decimoVenteCincoNO(){
         if (this.no24.value == 'no') {
             this.no24.style.display = 'none'
-            this.inp24.innerHTML = '<input type="text" name="stateSecurityElemenstAndServis" id="no24" value="no" readonly>'
+            this.inp24.innerHTML = '<input type="text" name="stateSecurityElemenstAndServisDetails" id="no24" value="no" readonly>'
             this.si24.setAttribute('disabled', '')
         }
     }
@@ -499,14 +499,14 @@ class siNo {
     decimoVenteSeisSi() {
         if (this.si25.value == 'si') {
             this.si25.style.display = 'none'
-            this.inp25.innerHTML = '<input type="text" name="stateSecurityElemenstAndServis" id="si25" value="si" readonly>'
+            this.inp25.innerHTML = '<input type="text" name="stateSecurityElemenstAndServisDetails" id="si25" value="si" readonly>'
             this.no25.setAttribute('disabled', '')
         }
     }
    decimoVenteSeisNO(){
         if (this.no25.value == 'no') {
             this.no25.style.display = 'none'
-            this.inp25.innerHTML = '<input type="text" name="stateSecurityElemenstAndServis" id="no25" value="no" readonly>'
+            this.inp25.innerHTML = '<input type="text" name="stateSecurityElemenstAndServisDetails" id="no25" value="no" readonly>'
             this.si25.setAttribute('disabled', '')
         }
     }
@@ -514,14 +514,14 @@ class siNo {
     decimoVenteSieteSi() {
         if (this.si26.value == 'si') {
             this.si26.style.display = 'none'
-            this.inp26.innerHTML = '<input type="text" name="stateSecurityElemenstAndServis" id="si26" value="si" readonly>'
+            this.inp26.innerHTML = '<input type="text" name="stateSecurityElemenstAndServisDetails" id="si26" value="si" readonly>'
             this.no26.setAttribute('disabled', '')
         }
     }
    decimoVenteSieteNO(){
         if (this.no26.value == 'no') {
             this.no26.style.display = 'none'
-            this.inp26.innerHTML = '<input type="text" name="stateSecurityElemenstAndServis" id="no26" value="no" readonly>'
+            this.inp26.innerHTML = '<input type="text" name="stateSecurityElemenstAndServisDetails" id="no26" value="no" readonly>'
             this.si26.setAttribute('disabled', '')
         }
     }
@@ -529,14 +529,14 @@ class siNo {
     decimoVenteOchoSi() {
         if (this.si27.value == 'si') {
             this.si27.style.display = 'none'
-            this.inp27.innerHTML = '<input type="text" name="stateSecurityElemenstAndServis" id="si27" value="si" readonly>'
+            this.inp27.innerHTML = '<input type="text" name="stateSecurityElemenstAndServisDetails" id="si27" value="si" readonly>'
             this.no27.setAttribute('disabled', '')
         }
     }
    decimoVenteOchoNO(){
         if (this.no27.value == 'no') {
             this.no27.style.display = 'none'
-            this.inp27.innerHTML = '<input type="text" name="stateSecurityElemenstAndServis" id="no27" value="no" readonly>'
+            this.inp27.innerHTML = '<input type="text" name="stateSecurityElemenstAndServisDetails" id="no27" value="no" readonly>'
             this.si27.setAttribute('disabled', '')
         }
     }
@@ -544,14 +544,14 @@ class siNo {
     decimoVenteNueveSi() {
         if (this.si28.value == 'si') {
             this.si28.style.display = 'none'
-            this.inp28.innerHTML = '<input type="text" name="stateSecurityElemenstAndServis" id="si28" value="si" readonly>'
+            this.inp28.innerHTML = '<input type="text" name="stateSecurityElemenstAndServisDetails" id="si28" value="si" readonly>'
             this.no28.setAttribute('disabled', '')
         }
     }
    decimoVenteNueveNO(){
         if (this.no28.value == 'no') {
             this.no28.style.display = 'none'
-            this.inp28.innerHTML = '<input type="text" name="stateSecurityElemenstAndServis" id="no28" value="no" readonly>'
+            this.inp28.innerHTML = '<input type="text" name="stateSecurityElemenstAndServisDetails" id="no28" value="no" readonly>'
             this.si28.setAttribute('disabled', '')
         }
     }
@@ -559,14 +559,14 @@ class siNo {
     decimoTreintaSi() {
         if (this.si29.value == 'si') {
             this.si29.style.display = 'none'
-            this.inp29.innerHTML = '<input type="text" name="stateSecurityElemenstAndServis" id="si29" value="si" readonly>'
+            this.inp29.innerHTML = '<input type="text" name="stateSecurityElemenstAndServisDetails" id="si29" value="si" readonly>'
             this.no29.setAttribute('disabled', '')
         }
     }
    decimoTreintaNO(){
         if (this.no29.value == 'no') {
             this.no29.style.display = 'none'
-            this.inp29.innerHTML = '<input type="text" name="stateSecurityElemenstAndServis" id="no29" value="no" readonly>'
+            this.inp29.innerHTML = '<input type="text" name="stateSecurityElemenstAndServisDetails" id="no29" value="no" readonly>'
             this.si29.setAttribute('disabled', '')
         }
     }
@@ -574,14 +574,14 @@ class siNo {
     decimoTreintaUnoSi() {
         if (this.si30.value == 'si') {
             this.si30.style.display = 'none'
-            this.inp30.innerHTML = '<input type="text" name="stateSecurityElemenstAndServis" id="si30" value="si" readonly>'
+            this.inp30.innerHTML = '<input type="text" name="stateSecurityElemenstAndServisDetails" id="si30" value="si" readonly>'
             this.no30.setAttribute('disabled', '')
         }
     }
    decimoTreintaUnoNO(){
         if (this.no30.value == 'no') {
             this.no30.style.display = 'none'
-            this.inp30.innerHTML = '<input type="text" name="stateSecurityElemenstAndServis" id="no30" value="no" readonly>'
+            this.inp30.innerHTML = '<input type="text" name="stateSecurityElemenstAndServisDetails" id="no30" value="no" readonly>'
             this.si30.setAttribute('disabled', '')
         }
     }
