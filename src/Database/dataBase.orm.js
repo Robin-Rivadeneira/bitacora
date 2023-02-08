@@ -16,6 +16,7 @@ const seguridadElementosModelos = require('../models/seguridadElementos')
 const seguridadElementosDetalleModelos = require('../models/seguridadElementosDetalle')
 const vendorModelos = require('../models/proveedor')
 const ordenTrabajoModelos = require('../models/ordenTrabajo')
+const implementedCategoryModelos = require('../models/implementoCategoria')
 
 
 const{ MYSQLHOST, MYSQLUSER, MYSQLPASSWORD, MYSQLDATABASE, MYSQLPORT, MYSQL_URI, } = require ("../keys");
@@ -58,9 +59,13 @@ const seguridadElementos = seguridadElementosModelos(sequelize, Sequelize)
 const seguridadElementosDetalle = seguridadElementosDetalleModelos(sequelize, Sequelize)
 const vendor = vendorModelos(sequelize, Sequelize)
 const ordenTrabajo = ordenTrabajoModelos(sequelize, Sequelize)
+const implementedCategory = implementedCategoryModelos(sequelize, Sequelize)
 
 seguridadElementos.hasMany(seguridadElementosDetalle)
 seguridadElementosDetalle.belongsTo(seguridadElementos)
+
+implementedCategory.hasMany(seguridadElementos)
+seguridadElementos.belongsTo(implementedCategory)
 
 matriculas.hasMany(impuestoMatricula)
 impuestoMatricula.belongsTo(matriculas)
@@ -154,5 +159,6 @@ module.exports = {
 	seguridadElementos,
 	seguridadElementosDetalle,
 	vendor,
-	ordenTrabajo
+	ordenTrabajo,
+	implementedCategory
 };
