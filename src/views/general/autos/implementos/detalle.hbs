@@ -19,63 +19,72 @@
     </div>
     {{/each}}
 
-    {{#each codigo}}
     <div id="primero">
         <label>CODIGOS DE ESPECIFICACIÓN</label>
-        <p>{{nameSecurityElemenstAndServis}}</p>
-        <p>{{stateSecurityElemenstAndServis}}</p>
+        {{#each codigo}}
+        <p>{{nameSecurityElemenstAndServisDetails}}</p>
+        <p>{{stateSecurityElemenstAndServisDetails}}</p>
+        {{/each}}
+        <div id="observaciones">
+            <label>Observaciones</label>
+            {{#each codigoObservacion}}
+            <p>{{observationSecurityElemenstAndServis}}</p>
+            {{/each}}
+        </div>
     </div>
-    <div id="observaciones">
-        <label>Observaciones</label>
-        <p>{{observationSecurityElemenstAndServis}}</p>
-    </div>
-    {{/each}}
 
-    {{#each niveles}}
     <div id="segundo">
         <label>NIVELES</label>
-        <p>{{nameSecurityElemenstAndServis}}</p>
-        <p>{{stateSecurityElemenstAndServis}}</p>
+        {{#each niveles}}
+        <p>{{nameSecurityElemenstAndServisDetails}}</p>
+        <p>{{stateSecurityElemenstAndServisDetails}}</p>
+        {{/each}}
+        <div id="observaciones">
+            <label>Observaciones</label>
+            {{#each nivelObservacion}}
+            <p>{{observationSecurityElemenstAndServis}}</p>
+            {{/each}}
+        </div>
     </div>
-    <div id="observaciones">
-        <label>Observaciones</label>
-        <p>{{observationSecurityElemenstAndServis}}</p>
-    </div>
-    {{/each}}
 
-    {{#each elementos}}
     <div id="tercero">
         <label>ELEMENTOS DE SEGURIDAD Y SERVICIOS</label>
-        <p>{{nameSecurityElemenstAndServis}}</p>
-        <p>{{stateSecurityElemenstAndServis}}</p>
+        {{#each elementos}}
+        <p>{{nameSecurityElemenstAndServisDetails}}</p>
+        <p>{{stateSecurityElemenstAndServisDetails}}</p>
+        {{/each}}
+        <div id="observaciones">
+            <label>Observaciones</label>
+            {{#each elementosObservacion}}
+            <p>{{observationSecurityElemenstAndServis}}</p>
+            {{/each}}
+        </div>
     </div>
-    <div id="observaciones">
-        <label>Observaciones</label>
-        <p>{{observationSecurityElemenstAndServis}}</p>
-    </div>
-    {{/each}}
 
-    {{#each herramientas}}
     <div id="cuarto">
         <label>HERRAMIENTAS</label>
-        <p>{{nameSecurityElemenstAndServis}}</p>
-        <p>{{stateSecurityElemenstAndServis}}</p>
+        {{#each herramientas}}
+        <p>{{nameSecurityElemenstAndServisDetails}}</p>
+        <p>{{stateSecurityElemenstAndServisDetails}}</p>
+        {{/each}}
+        <div id="observaciones">
+            <label>Observaciones</label>
+            {{#each herramientasObservacion}}
+            <p>{{observationSecurityElemenstAndServis}}</p>
+            {{/each}}
+        </div>
     </div>
-    <div id="observaciones">
-        <label>Observaciones</label>
-        <p>{{observationSecurityElemenstAndServis}}</p>
-    </div>
-    {{/each}}
 
-    {{#each luces}}
     <div id="quinto">
         <label>LUCES</label>
-        <p>{{nameSecurityElemenstAndServis}}</p>
-        <p>{{stateSecurityElemenstAndServis}}</p>
-    </div>
-    <div id="observaciones">
-        <label>Observaciones</label>
-        <p>{{observationSecurityElemenstAndServis}}</p>
-    </div>
-    {{/each}}
+        {{#each luces}}
+        <p>{{nameSecurityElemenstAndServisDetails}}</p>
+        <p>{{stateSecurityElemenstAndServisDetails}}</p>
+        {{/each}}
+        <div id="observaciones">
+            <label>Observaciones</label>
+            {{#each lucesObservacion}}
+            <p>{{observationSecurityElemenstAndServis}}</p>
+            {{/each}}
+        </div>
 </form>
