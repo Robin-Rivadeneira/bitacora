@@ -28,13 +28,18 @@ implemento.sendImplemeto = async (req, res) => {
 implemento.detalleImplemeto = async (req, res) => {
     const id = req.params.id
     const cars = await sql.query('select DISTINCT idCars,licenseplateCars,modelCars,brandCars from implementos where idCars = ?', [id])
-    const seguridad = await sql.query('select DISTINCT idSecurityElemenstAndServis,dateSecurityElemenstAndServis,observationSecurityElemenstAndServis from implementos where CarIdCars = ?', [id])
-    const codigo = await sql.query('select DISTINCT nameSecurityElemenstAndServisDetails,typeSecurityElemenstAndServisDetails,stateSecurityElemenstAndServisDetails from implementos where CarIdCars = ? AND typeSecurityElemenstAndServisDetails = "CODIGOS DE ESPECIFICACIÓN"', [id])
-    const niveles = await sql.query('select DISTINCT nameSecurityElemenstAndServisDetails,typeSecurityElemenstAndServisDetails,stateSecurityElemenstAndServisDetails from implementos where CarIdCars = ? AND typeSecurityElemenstAndServisDetails = "NIVELES"', [id])
-    const elementos = await sql.query('select DISTINCT nameSecurityElemenstAndServisDetails,typeSecurityElemenstAndServisDetails,stateSecurityElemenstAndServisDetails from implementos where CarIdCars = ? AND typeSecurityElemenstAndServisDetails = "ELEMENTOS DE SEGURIDAD  Y SERVICIOS"', [id])
-    const herramientas = await sql.query('select DISTINCT nameSecurityElemenstAndServisDetails,typeSecurityElemenstAndServisDetails,stateSecurityElemenstAndServisDetails from implementos where CarIdCars = ? AND typeSecurityElemenstAndServisDetails = "HERRAMIENTAS"', [id])
-    const luces = await sql.query('select DISTINCT nameSecurityElemenstAndServisDetails,typeSecurityElemenstAndServisDetails,stateSecurityElemenstAndServisDetails from implementos where CarIdCars = ? AND typeSecurityElemenstAndServisDetails = "LUCES"', [id])
-    res.render('general/autos/implementos/detalle', {seguridad, cars, codigo, niveles, elementos, herramientas, luces })
+    const seguridad = await sql.query('select DISTINCT idSecurityElemenstAndServis,dateSecurityElemenstAndServis from implementos where CarIdCars = ?', [id])
+    const codigo = await sql.query('select DISTINCT nameSecurityElemenstAndServisDetails,stateSecurityElemenstAndServisDetails from implementos where CarIdCars = ? AND typeSecurityElemenstAndServisDetails = "CODIGOS DE ESPECIFICACIÓN"', [id])
+    const codigoObservacion = await sql.query('select DISTINCT observationSecurityElemenstAndServis from implementos where CarIdCars = ? AND typeSecurityElemenstAndServisDetails = "CODIGOS DE ESPECIFICACIÓN"', [id])
+    const niveles = await sql.query('select DISTINCT nameSecurityElemenstAndServisDetails,stateSecurityElemenstAndServisDetails from implementos where CarIdCars = ? AND typeSecurityElemenstAndServisDetails = "NIVELES"', [id])
+    const nivelObservacion = await sql.query('select DISTINCT observationSecurityElemenstAndServis from implementos where CarIdCars = ? AND typeSecurityElemenstAndServisDetails = "NIVELES"', [id])
+    const elementos = await sql.query('select DISTINCT nameSecurityElemenstAndServisDetails,stateSecurityElemenstAndServisDetails from implementos where CarIdCars = ? AND typeSecurityElemenstAndServisDetails = "ELEMENTOS DE SEGURIDAD  Y SERVICIOS"', [id])
+    const elementosObservacion = await sql.query('select DISTINCT observationSecurityElemenstAndServis from implementos where CarIdCars = ? AND typeSecurityElemenstAndServisDetails = "ELEMENTOS DE SEGURIDAD  Y SERVICIOS"', [id])
+    const herramientas = await sql.query('select DISTINCT nameSecurityElemenstAndServisDetails,stateSecurityElemenstAndServisDetails from implementos where CarIdCars = ? AND typeSecurityElemenstAndServisDetails = "HERRAMIENTAS"', [id])
+    const herramientasObservacion = await sql.query('select DISTINCT observationSecurityElemenstAndServis from implementos where CarIdCars = ? AND typeSecurityElemenstAndServisDetails = "HERRAMIENTAS"', [id])
+    const luces = await sql.query('select DISTINCT nameSecurityElemenstAndServisDetails,stateSecurityElemenstAndServisDetails from implementos where CarIdCars = ? AND typeSecurityElemenstAndServisDetails = "LUCES"', [id])
+    const lucesObservacion = await sql.query('select DISTINCT observationSecurityElemenstAndServis from implementos where CarIdCars = ? AND typeSecurityElemenstAndServisDetails = "LUCES"', [id])
+    res.render('general/autos/implementos/detalle', {seguridad, cars, codigo, niveles, elementos, herramientas, luces, lucesObservacion, herramientasObservacion, elementosObservacion, nivelObservacion, codigoObservacion })
 }
 
 implemento.bringImplemeto = async (req, res) => {
