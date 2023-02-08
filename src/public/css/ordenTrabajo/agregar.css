@@ -127,24 +127,20 @@ left: 40%;
     left: 42%;
 }
 
-#si{
+#si,
+#no{
     position: absolute;
     top: 100%;
     left: 30%;
 }
 
-#si input{
-    position: absolute;
+#no{
+    left: 60%;
 }
 
+#si input,
 #no input{
     position: absolute;
-}
-
-#no{
-    position: absolute;
-    top: 100%;
-    right: 40%;
 }
 
 table{
@@ -161,11 +157,11 @@ td{
 }
 
 #boton {
+    width: 3%;
+    height: 5%;
     position: absolute;
     top: 39%;
     right: 6%;
-    width: 3%;
-    height: 5%;
 }
 
 #boton button {

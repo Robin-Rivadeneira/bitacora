@@ -1,9 +1,9 @@
 #orderWorks {
+    width: 100%;
+    max-width: 12%;
     position: absolute;
     top: 13%;
     left: 80%;
-    width: 100%;
-    max-width: 12%;
 }
 
 #orderWorks p {
@@ -13,28 +13,28 @@
 }
 
 #orderWorks input {
-    position: absolute;
     width: 15%;
+    position: absolute;
     left: 45%;
 }
 
 #solicitantes {
+    width: 20%;
     position: absolute;
     top: 5%;
     left: 0%;
-    width: 20%;
 }
 
 #DatosCarro {
+    width: 15%;
     position: absolute;
     top: 10%;
     left: 1%;
-    width: 15%;
 }
 
 #vehiculo input {
-    margin-top: 2%;
     width: 15%;
+    margin-top: 2%;
 }
 
 #Placa p {
@@ -49,15 +49,15 @@
 }
 
 #provedor{
+    width: 15%;
+    height: 20%;
     position: absolute;
     top: 35%;
     left: 2%;
-    width: 15%;
-    height: 20%;
 }
 #numeroDeColumnas{
-    position: absolute;
     width: 20%;
+    position: absolute;
     top: 7%;
     left: 78%;
 }
@@ -80,35 +80,35 @@
 }
 
 #Proveedor input{
-    position: absolute;
     width: 50%;
+    position: absolute;
     left: 50%;
 }
 
 #Telefono input{
-    position: absolute;
     width: 50%;
+    position: absolute;
     top: 35%;
     left: 50%;
 }
 
 #Direccion input{
-    position: absolute;
     width: 50%;
+    position: absolute;
     top: 75%;
     left: 50%;
 }
 
 #fecha{
-    position: absolute;
     width: 15%;
+    position: absolute;
     top: 20%;
     left: 74%;
 }
 
 #aproximado{
-    position: absolute;
     width: 15%;
+    position: absolute;
     top: 27%;
     left: 80%;
 }
@@ -121,15 +121,15 @@ left: 40%;
 }
 
 #imagen{
-    position: absolute;
     width: 10%;
+    position: absolute;
     top: 20%;
     left: 42%;
 }
 
 #imagen1{
-    position: absolute;
     width: 10%;
+    position: absolute;
     top: 1%;
     left: 42%;
 }
@@ -154,11 +154,11 @@ td{
 }
 
 #boton {
+    width: 3%;
+    height: 5%;
     position: absolute;
     top: 39%;
     right: 6%;
-    width: 3%;
-    height: 5%;
 }
 
 #boton button {

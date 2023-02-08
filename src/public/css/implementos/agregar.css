@@ -13,9 +13,9 @@
 }
 
 #primero {
+    width: 50%;
     position: absolute;
     background-color: blue;
-    width: 50%;
 }
 
 #segundo {
