@@ -3,25 +3,30 @@
     height: 100%;
     max-width: 100%;
     max-height: 100%;
-    position: absolute;
+    position: fixed;
     top: 0%;
     background: radial-gradient(#988a87 20%, #004a29, black);
 }
 
 #contenedor,
-#contenido {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    width: 100%;
-    height: 100%;
-    align-content: center;
+#contenido,
+#tarjeta,
+#mensaje {
     background-color: #ffffff70;
     border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#contenedor a,
+#contenido a {
+    text-decoration: none;
 }
 
 input,
 select,
 textarea {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     border: 2px solid black;
     text-align: center;
     border-radius: 10px;

@@ -10,26 +10,24 @@
                 </div>
 
                 <div id="matricula">
-                    <label>Placa:</label>
-                    <p>{{licenseplateCars}}</p>
+                    <p><b>Placa:</b> {{licenseplateCars}}</p>
                 </div>
 
                 <div id="modelo">
-                    <label>Modelo:</label>
-                    <p>{{brandCars}} {{modelCars}}</p>
+                    <p><b>Modelo:</b> {{brandCars}} {{modelCars}}</p>
                 </div>
 
-                <div id="editar">
-                    <a href="/cars/edit/{{idCars}}">
-                        <button type="button">Actualizar</button>
-                    </a>
-                </div>
+                    <div id="editar">
+                        <a href="/cars/edit/{{idCars}}">
+                            <button type="button">Actualizar</button>
+                        </a>
+                    </div>
 
-                <div id="seleccionar">
-                    <a href="/cars/matricula/list/{{idCars}}">
-                        <button type="button">Matricula</button>
-                    </a>
-                </div>
+                    <div id="seleccionar">
+                        <a href="/cars/matricula/list/{{idCars}}">
+                            <button type="button">Matrícula</button>
+                        </a>
+                    </div>
 
                 <div id="kilometraje">
                     <a href="/cars/kilometraje/list/{{idCars}}">
@@ -54,6 +52,18 @@
                         <button type="button">Mantenimiento</button>
                     </a>
                 </div>
+            </div>
+
+            {{else}}
+            <div id="mensaje">
+                <p>
+                    <b>Usted no tiene registrado ningún contacto de Emergencia.</b>
+                </p>
+                <a href="/cars/add/{{user.idUsers}}">
+                    <button type="button">
+                        ¿Desea registrar?
+                    </button>
+                </a>
             </div>
             {{/each}}
         </div>

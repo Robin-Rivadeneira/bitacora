@@ -112,11 +112,10 @@
     top: 17.5%;
 }
 
-
 #Marca,
 #Color,
 #Motor,
-#FechaMatricula,
+#FechaCasudidad,
 #Clase {
     left: 55%;
 }
@@ -170,11 +169,6 @@
 
 /* RESPONSIVE */
 @media only screen and (orientation: landscape) and (max-width: 1200px) and (min-width: 667px) {
-    #fondo {
-        height: 150%;
-        max-height: 150%;
-    }
-
     #contenedor {
         height: 135%;
         max-height: 135%;
@@ -203,11 +197,6 @@
 }
 
 @media only screen and (orientation: portrait) and (max-width: 1200px) and (min-width: 667px) {
-    #fondo {
-        height: 150%;
-        max-height: 150%;
-    }
-
     #contenedor {
         height: 135%;
         max-height: 135%;
@@ -236,11 +225,6 @@
 }
 
 @media only screen and (orientation: portrait) and (max-width: 667px) and (min-width: 0px) {
-    #fondo {
-        height: 175%;
-        max-height: 175%;
-    }
-
     #contenedor {
         height: 170%;
         max-height: 170%;
