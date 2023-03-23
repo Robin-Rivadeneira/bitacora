@@ -1,6 +1,6 @@
 #contenedor {
-    max-width: 70%;
-    max-height: 70%;
+    width: 70%;
+    height: 70%;
     position: absolute;
     top: 15%;
     left: 15%;
